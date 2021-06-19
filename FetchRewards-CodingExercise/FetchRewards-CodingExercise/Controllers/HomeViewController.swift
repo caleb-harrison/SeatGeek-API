@@ -12,6 +12,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     private var events = Events(events: [])
     private var favoritedEvents: [NSManagedObject] = []
+    private var selectedIndex: Int!
     
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
@@ -121,6 +122,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
         searchBar.endEditing(true)
         searchBar.showsCancelButton = false
     }
@@ -134,7 +136,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("clicked event row #\(indexPath.row)")
-        // set selected event to events[indexPath.row]
+        selectedIndex = indexPath.row
         performSegue(withIdentifier: "GoToEventDetail", sender: self)
     }
 
@@ -148,8 +150,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let event = events.events[indexPath.row]
         
         cell.eventLabel.text = event.title
-        cell.locationLabel.text = "Tuscaloosa, AL"
-        cell.dateTimeLabel.text = "Thursday, August 31, 2021 10:00 PM"
+        cell.locationLabel.text = event.formatLocation()
+        cell.dateTimeLabel.text = event.formatDateTime()
 
         cell.setupWordWrapping()
 
@@ -163,10 +165,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         {
             if let vc = segue.destination as? DetailViewController
             {
+                vc.selectedEvent = events.events[selectedIndex]
                 vc.favoritedEvent = false
-                vc.eventName = "Miami Hurricanes at Alabama Crimson Tide Football"
-                vc.dateTime = "Thursday, August 31, 2021 10:00 PM"
-                vc.location = "Tuscaloosa, AL"
             }
         }
     }

@@ -9,11 +9,8 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    var selectedEvent: Event!
     var favoritedEvent: Bool!
-    
-    var eventName: String!
-    var dateTime: String!
-    var location: String!
     
     @IBOutlet var eventLabel: UILabel!
     @IBOutlet var dateTimeLabel: UILabel!
@@ -25,9 +22,9 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupFavoriteButton()
-        setupWordWrapping()
+        
         setLabels()
+        setupWordWrapping()
     }
     
     func setupFavoriteButton() {
@@ -43,9 +40,17 @@ class DetailViewController: UIViewController {
     }
     
     func setLabels() {
-        eventLabel.text = "Miami Hurricanes at Alabama Crimson Tide Football"
-        dateTimeLabel.text = "Thursday, August 31, 2021 10:00 PM"
-        locationLabel.text = "Tuscaloosa, AL"
+        eventLabel.text = selectedEvent.title
+        dateTimeLabel.text = formatDateTime()
+        locationLabel.text = formatLocation()
+    }
+    
+    func formatDateTime() -> String {
+        return selectedEvent.formatDateTime()
+    }
+    
+    func formatLocation() -> String {
+        return selectedEvent.formatLocation()
     }
     
     func setupWordWrapping() {

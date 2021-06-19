@@ -21,6 +21,10 @@ struct Event: Codable {
     // Date/time of the event in the local timezone of the venue – you will generally want to display this to users
     let datetime_local: String
     
+    // Returns bool if date/time is determined
+    let time_tbd: Bool
+    let date_tbd: Bool
+    
     // An list of performers – primary, home_team, away_team fields indicate the performer's role at the event
     let performers: [Performer]
     
@@ -47,6 +51,8 @@ struct Event: Codable {
         case title
         case url
         case datetime_local
+        case time_tbd
+        case date_tbd
         case performers
         case venue
         case short_title
@@ -54,6 +60,37 @@ struct Event: Codable {
         case score
         case type
         case id
+    }
+    
+    func formatDateTime() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        let date = dateFormatter.date(from: datetime_local)
+        var dateTimeString = ""
+        
+        if date_tbd && time_tbd{
+            dateTimeString = "Estimated: "
+            dateFormatter.dateFormat = "EEEE, d MMMM yyyy"
+            dateTimeString.append("\n\(dateFormatter.string(from: date!))\nTime: TBD")
+        } else if date_tbd && !time_tbd {
+            dateTimeString = "Estimated: "
+            dateFormatter.dateFormat = "EEEE, d MMMM yyyy \nh:mm a"
+            dateTimeString.append("\n\(dateFormatter.string(from: date!))")
+            
+        } else if time_tbd {
+            dateFormatter.dateFormat = "EEEE, d MMMM yyyy"
+            dateTimeString = dateFormatter.string(from: date!)
+            dateTimeString.append("\nTime: TBD")
+        } else {
+            dateFormatter.dateFormat = "EEEE, d MMMM yyyy \nh:mm a"
+            dateTimeString = dateFormatter.string(from: date!)
+        }
+        
+        return dateTimeString
+    }
+    
+    func formatLocation() -> String {
+        return "\(venue.city), \(venue.state)"
     }
     
 }

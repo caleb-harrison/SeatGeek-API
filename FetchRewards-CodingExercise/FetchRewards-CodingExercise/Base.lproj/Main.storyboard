@@ -8,22 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="63L-IU-o3a">
-            <objects>
-                <navigationController id="3WQ-3H-f59" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QtP-pU-doq">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Km9-1v-rMb" kind="relationship" relationship="rootViewController" id="Lo3-Ts-6RK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xcc-BP-x68" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1110" y="75"/>
-        </scene>
         <!--Home View Controller-->
         <scene sceneID="2Pd-EH-Gpg">
             <objects>
@@ -33,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Search for events" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5h-b3-ge0">
-                                <rect key="frame" x="0.0" y="98" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ch6-B9-k7V"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Stf-5X-pjk">
-                                <rect key="frame" x="0.0" y="142" width="414" height="720"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="764"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventTableViewCell" rowHeight="174" id="wZX-PC-WLt" customClass="EventTableViewCell" customModule="FetchRewards_CodingExercise" customModuleProvider="target">
@@ -163,13 +147,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date and Time" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzv-su-HMO" userLabel="Date Time Label">
-                                <rect key="frame" x="20" y="392" width="117" height="21"/>
+                                <rect key="frame" x="20" y="392" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gln-fk-TtF" userLabel="Location Label">
-                                <rect key="frame" x="20" y="421" width="65.5" height="21"/>
+                                <rect key="frame" x="20" y="421" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
@@ -182,12 +166,14 @@
                             <constraint firstItem="MXh-kD-Xth" firstAttribute="trailing" secondItem="ISw-OX-d15" secondAttribute="trailing" constant="20" id="7db-6Y-ETG"/>
                             <constraint firstItem="plf-3D-UYF" firstAttribute="leading" secondItem="MXh-kD-Xth" secondAttribute="leading" constant="20" id="B1B-VM-9J7"/>
                             <constraint firstItem="plf-3D-UYF" firstAttribute="top" secondItem="MXh-kD-Xth" secondAttribute="top" constant="20" id="Bnd-sR-36W"/>
+                            <constraint firstItem="MXh-kD-Xth" firstAttribute="trailing" secondItem="gln-fk-TtF" secondAttribute="trailing" constant="20" id="ItE-GJ-8Oj"/>
                             <constraint firstItem="sr3-Ky-emG" firstAttribute="top" secondItem="MXh-kD-Xth" secondAttribute="top" constant="17" id="J7B-d5-9vd"/>
                             <constraint firstItem="gln-fk-TtF" firstAttribute="leading" secondItem="MXh-kD-Xth" secondAttribute="leading" constant="20" id="S4n-up-Uc2"/>
                             <constraint firstItem="gln-fk-TtF" firstAttribute="top" secondItem="Pzv-su-HMO" secondAttribute="bottom" constant="8" symbolic="YES" id="TqV-5a-pQN"/>
                             <constraint firstItem="ISw-OX-d15" firstAttribute="leading" secondItem="MXh-kD-Xth" secondAttribute="leading" constant="20" id="Xla-2A-q9l"/>
                             <constraint firstItem="Pzv-su-HMO" firstAttribute="top" secondItem="ISw-OX-d15" secondAttribute="bottom" constant="22" id="Yu0-Cj-IJp"/>
                             <constraint firstItem="Syn-Z7-fUW" firstAttribute="leading" secondItem="sr3-Ky-emG" secondAttribute="trailing" constant="25" id="bG0-t8-m8G"/>
+                            <constraint firstItem="MXh-kD-Xth" firstAttribute="trailing" secondItem="Pzv-su-HMO" secondAttribute="trailing" constant="20" id="dbe-gV-rPm"/>
                             <constraint firstItem="sr3-Ky-emG" firstAttribute="leading" secondItem="plf-3D-UYF" secondAttribute="trailing" constant="25" id="j7W-WI-Dq1"/>
                             <constraint firstItem="MXh-kD-Xth" firstAttribute="trailing" secondItem="Syn-Z7-fUW" secondAttribute="trailing" constant="20" id="rLV-vR-H8A"/>
                             <constraint firstItem="ISw-OX-d15" firstAttribute="top" secondItem="sr3-Ky-emG" secondAttribute="bottom" constant="40" id="ruf-Fa-guX"/>
