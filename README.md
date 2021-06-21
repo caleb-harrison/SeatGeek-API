@@ -20,6 +20,7 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+![Commits][Commits]
 ![Platform][platform-image]
 [![Swift Version][swift-image]][swift-url]
 [![MIT License][license-shield]][license-url]
@@ -182,6 +183,7 @@ Project Link: [https://github.com/caleb-harrison/FetchRewards-Coding-Exercise](h
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[commits]: https://img.shields.io/github/commit-activity/m/caleb-harrison/FetchRewards-Coding-Exercise?style=for-the-badge
 [platform-image]: https://img.shields.io/badge/Platform-iOS-green.svg?style=for-the-badge
 [contributors-shield]: https://img.shields.io/github/contributors/caleb-harrison/repo.svg?style=for-the-badge
 [contributors-url]: https://github.com/caleb-harrison/repo/graphs/contributors
