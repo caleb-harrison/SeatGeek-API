@@ -21,6 +21,7 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 <!-- ![Commits][commits-shield] -->
+{:.center}
 ![Platform][platform-image]
 [![Swift Version][swift-image]][swift-url]
 [![MIT License][license-shield]][license-url]
