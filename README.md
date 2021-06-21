@@ -35,7 +35,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">FetchRewards Coding Exercise</h3>
+  <h3 align="center">Fetch Rewards Coding Exercise</h3>
 
   <p align="center">
     This is an iOS application that consumes the open-source SeatGeek API and displays events in a UITableView. The application fetches relevant events from SeatGeek API while user is typing in the search bar.
