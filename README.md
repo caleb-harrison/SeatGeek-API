@@ -184,18 +184,14 @@ Project Link: [https://github.com/caleb-harrison/FetchRewards-Coding-Exercise](h
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [commits]: https://img.shields.io/github/commit-activity/m/caleb-harrison/FetchRewards-Coding-Exercise?style=for-the-badge
+
 [platform-image]: https://img.shields.io/badge/Platform-iOS-green.svg?style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/contributors/caleb-harrison/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/caleb-harrison/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/caleb-harrison/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/caleb-harrison/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/caleb-harrison/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/caleb-harrison/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/caleb-harrison/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/caleb-harrison/repo/issues
-[license-shield]: https://img.shields.io/github/license/caleb-harrison/repo.svg?style=for-the-badge
+
+[license-shield]: https://img.shields.io/github/license/caleb-harrison/FetchRewards-Coding-Exercise?style=for-the-badge
 [license-url]: https://github.com/caleb-harrison/FetchRewards-Coding-Exercise/blob/master/LICENSE.txt
+
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/caleb-harrison
+
 [swift-image]:https://img.shields.io/badge/Swift-5.3.2-orange.svg?style=for-the-badge
 [swift-url]: https://swift.org/
