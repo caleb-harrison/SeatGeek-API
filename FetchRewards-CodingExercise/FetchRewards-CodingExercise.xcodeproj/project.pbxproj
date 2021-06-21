@@ -24,6 +24,8 @@
 		3CF7884C267E7ABB00269D2B /* Performer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF7884B267E7ABB00269D2B /* Performer.swift */; };
 		3CF7885126801CA400269D2B /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF7885026801CA400269D2B /* LoadImage.swift */; };
 		3CF7885326803FD200269D2B /* EmptyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF7885226803FD200269D2B /* EmptyTableView.swift */; };
+		3CF788552681157D00269D2B /* ImageBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF788542681157D00269D2B /* ImageBorder.swift */; };
+		3CF788572681230A00269D2B /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF788562681230A00269D2B /* LaunchScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		3CF7884B267E7ABB00269D2B /* Performer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performer.swift; sourceTree = "<group>"; };
 		3CF7885026801CA400269D2B /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
 		3CF7885226803FD200269D2B /* EmptyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableView.swift; sourceTree = "<group>"; };
+		3CF788542681157D00269D2B /* ImageBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBorder.swift; sourceTree = "<group>"; };
+		3CF788562681230A00269D2B /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,7 @@
 			children = (
 				3CF787BD267D2D3A00269D2B /* HomeViewController.swift */,
 				3CF787F8267D2EF800269D2B /* DetailViewController.swift */,
+				3CF788562681230A00269D2B /* LaunchScreenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			children = (
 				3CF7885026801CA400269D2B /* LoadImage.swift */,
 				3CF7885226803FD200269D2B /* EmptyTableView.swift */,
+				3CF788542681157D00269D2B /* ImageBorder.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -333,11 +339,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF788552681157D00269D2B /* ImageBorder.swift in Sources */,
 				3CF78844267E4BF800269D2B /* Event.swift in Sources */,
 				3CF7885326803FD200269D2B /* EmptyTableView.swift in Sources */,
 				3CF7884A267E77CB00269D2B /* Venue.swift in Sources */,
 				3CF78848267E777A00269D2B /* Stats.swift in Sources */,
 				3CF787BE267D2D3A00269D2B /* HomeViewController.swift in Sources */,
+				3CF788572681230A00269D2B /* LaunchScreenViewController.swift in Sources */,
 				3CF7885126801CA400269D2B /* LoadImage.swift in Sources */,
 				3CF787C4267D2D3A00269D2B /* FetchRewards_CodingExercise.xcdatamodeld in Sources */,
 				3CF7884C267E7ABB00269D2B /* Performer.swift in Sources */,
