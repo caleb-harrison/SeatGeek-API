@@ -182,7 +182,7 @@ Project Link: [https://github.com/caleb-harrison/FetchRewards-Coding-Exercise](h
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[platform-image]: https://img.shields.io/badge/Platform-iOS-green.svg
+[platform-image]: https://img.shields.io/badge/Platform-iOS-green.svg?style=for-the-badge
 [contributors-shield]: https://img.shields.io/github/contributors/caleb-harrison/repo.svg?style=for-the-badge
 [contributors-url]: https://github.com/caleb-harrison/repo/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/caleb-harrison/repo.svg?style=for-the-badge
@@ -195,5 +195,5 @@ Project Link: [https://github.com/caleb-harrison/FetchRewards-Coding-Exercise](h
 [license-url]: https://github.com/caleb-harrison/FetchRewards-Coding-Exercise/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/caleb-harrison
-[swift-image]:https://img.shields.io/badge/Swift-5.3.2-orange.svg
+[swift-image]:https://img.shields.io/badge/Swift-5.3.2-orange.svg?style=for-the-badge
 [swift-url]: https://swift.org/
