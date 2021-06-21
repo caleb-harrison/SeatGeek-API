@@ -17,12 +17,13 @@
 		3CF787D4267D2D3C00269D2B /* FetchRewards_CodingExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF787D3267D2D3C00269D2B /* FetchRewards_CodingExerciseTests.swift */; };
 		3CF787DF267D2D3C00269D2B /* FetchRewards_CodingExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF787DE267D2D3C00269D2B /* FetchRewards_CodingExerciseUITests.swift */; };
 		3CF787F4267D2EA700269D2B /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF787F3267D2EA700269D2B /* EventTableViewCell.swift */; };
-		3CF787F7267D2ED600269D2B /* EventDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF787F6267D2ED600269D2B /* EventDetails.swift */; };
 		3CF787F9267D2EF800269D2B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF787F8267D2EF800269D2B /* DetailViewController.swift */; };
 		3CF78844267E4BF800269D2B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF78843267E4BF700269D2B /* Event.swift */; };
 		3CF78848267E777A00269D2B /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF78847267E777A00269D2B /* Stats.swift */; };
 		3CF7884A267E77CB00269D2B /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF78849267E77CB00269D2B /* Venue.swift */; };
 		3CF7884C267E7ABB00269D2B /* Performer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF7884B267E7ABB00269D2B /* Performer.swift */; };
+		3CF7885126801CA400269D2B /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF7885026801CA400269D2B /* LoadImage.swift */; };
+		3CF7885326803FD200269D2B /* EmptyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF7885226803FD200269D2B /* EmptyTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,12 +60,13 @@
 		3CF787DE267D2D3C00269D2B /* FetchRewards_CodingExerciseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRewards_CodingExerciseUITests.swift; sourceTree = "<group>"; };
 		3CF787E0267D2D3C00269D2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CF787F3267D2EA700269D2B /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
-		3CF787F6267D2ED600269D2B /* EventDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetails.swift; sourceTree = "<group>"; };
 		3CF787F8267D2EF800269D2B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3CF78843267E4BF700269D2B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		3CF78847267E777A00269D2B /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		3CF78849267E77CB00269D2B /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		3CF7884B267E7ABB00269D2B /* Performer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performer.swift; sourceTree = "<group>"; };
+		3CF7885026801CA400269D2B /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
+		3CF7885226803FD200269D2B /* EmptyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		3CF787B8267D2D3900269D2B /* FetchRewards-CodingExercise */ = {
 			isa = PBXGroup;
 			children = (
+				3CF7884F26801C8D00269D2B /* Helpers */,
 				3CF787EC267D2DAC00269D2B /* Models */,
 				3CF787ED267D2DB800269D2B /* Views */,
 				3CF787EE267D2DBE00269D2B /* Controllers */,
@@ -149,11 +152,8 @@
 		3CF787EC267D2DAC00269D2B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3CF787C2267D2D3A00269D2B /* FetchRewards_CodingExercise.xcdatamodeld */,
-				3CF78843267E4BF700269D2B /* Event.swift */,
-				3CF78847267E777A00269D2B /* Stats.swift */,
-				3CF78849267E77CB00269D2B /* Venue.swift */,
-				3CF7884B267E7ABB00269D2B /* Performer.swift */,
+				3CF7884E267F908600269D2B /* Data */,
+				3CF7884D267F906300269D2B /* Responses */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				3CF787F3267D2EA700269D2B /* EventTableViewCell.swift */,
-				3CF787F6267D2ED600269D2B /* EventDetails.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +173,34 @@
 				3CF787F8267D2EF800269D2B /* DetailViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3CF7884D267F906300269D2B /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				3CF78843267E4BF700269D2B /* Event.swift */,
+				3CF78847267E777A00269D2B /* Stats.swift */,
+				3CF78849267E77CB00269D2B /* Venue.swift */,
+				3CF7884B267E7ABB00269D2B /* Performer.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		3CF7884E267F908600269D2B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3CF787C2267D2D3A00269D2B /* FetchRewards_CodingExercise.xcdatamodeld */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3CF7884F26801C8D00269D2B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3CF7885026801CA400269D2B /* LoadImage.swift */,
+				3CF7885226803FD200269D2B /* EmptyTableView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,10 +334,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CF78844267E4BF800269D2B /* Event.swift in Sources */,
+				3CF7885326803FD200269D2B /* EmptyTableView.swift in Sources */,
 				3CF7884A267E77CB00269D2B /* Venue.swift in Sources */,
 				3CF78848267E777A00269D2B /* Stats.swift in Sources */,
 				3CF787BE267D2D3A00269D2B /* HomeViewController.swift in Sources */,
-				3CF787F7267D2ED600269D2B /* EventDetails.swift in Sources */,
+				3CF7885126801CA400269D2B /* LoadImage.swift in Sources */,
 				3CF787C4267D2D3A00269D2B /* FetchRewards_CodingExercise.xcdatamodeld in Sources */,
 				3CF7884C267E7ABB00269D2B /* Performer.swift in Sources */,
 				3CF787BA267D2D3900269D2B /* AppDelegate.swift in Sources */,

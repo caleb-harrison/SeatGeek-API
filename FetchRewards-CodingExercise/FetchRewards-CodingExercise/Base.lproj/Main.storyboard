@@ -16,6 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kB0-XR-5Kl" userLabel="No Search Results View">
+                                <rect key="frame" x="0.0" y="98" width="414" height="764"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We couldn't find what you're looking for.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1K-gC-pwY">
+                                        <rect key="frame" x="40.5" y="372" width="333.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try searching another keyword." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AI-Fj-sbD">
+                                        <rect key="frame" x="87.5" y="397.5" width="239" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No-Search-Results" translatesAutoresizingMaskIntoConstraints="NO" id="sos-GL-25K">
+                                        <rect key="frame" x="0.0" y="159" width="414" height="178"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="178" id="XeV-Ui-T7R"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="1AI-Fj-sbD" firstAttribute="centerX" secondItem="kB0-XR-5Kl" secondAttribute="centerX" id="2l7-NF-XPh"/>
+                                    <constraint firstItem="Z1K-gC-pwY" firstAttribute="top" secondItem="sos-GL-25K" secondAttribute="bottom" constant="35" id="7dH-4O-CtO"/>
+                                    <constraint firstItem="Z1K-gC-pwY" firstAttribute="centerX" secondItem="kB0-XR-5Kl" secondAttribute="centerX" id="GeI-wL-3yh"/>
+                                    <constraint firstItem="1AI-Fj-sbD" firstAttribute="top" secondItem="Z1K-gC-pwY" secondAttribute="bottom" constant="5" id="dF7-w9-Xva"/>
+                                    <constraint firstItem="sos-GL-25K" firstAttribute="leading" secondItem="kB0-XR-5Kl" secondAttribute="leading" id="dni-o7-sX0"/>
+                                    <constraint firstAttribute="trailing" secondItem="sos-GL-25K" secondAttribute="trailing" id="sIR-F2-vbj"/>
+                                    <constraint firstItem="Z1K-gC-pwY" firstAttribute="centerY" secondItem="kB0-XR-5Kl" secondAttribute="centerY" id="xFq-KD-Fm6"/>
+                                </constraints>
+                            </view>
                             <searchBar contentMode="redraw" placeholder="Search for events" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5h-b3-ge0">
                                 <rect key="frame" x="0.0" y="54" width="414" height="44"/>
                                 <constraints>
@@ -57,7 +90,7 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bryant-denny" translatesAutoresizingMaskIntoConstraints="NO" id="jpP-1E-2sZ" userLabel="Event Image">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No-Image-Found" translatesAutoresizingMaskIntoConstraints="NO" id="jpP-1E-2sZ" userLabel="Event Image">
                                                     <rect key="frame" x="30" y="21" width="90" height="90"/>
                                                     <color key="tintColor" systemColor="labelColor"/>
                                                     <constraints>
@@ -65,12 +98,19 @@
                                                         <constraint firstAttribute="width" secondItem="jpP-1E-2sZ" secondAttribute="height" multiplier="1:1" id="e2i-0O-99k"/>
                                                     </constraints>
                                                 </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="e5I-N4-hLP">
+                                                    <rect key="frame" x="15.5" y="11" width="30" height="26"/>
+                                                    <color key="tintColor" systemColor="systemRedColor"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="IcC-2u-ZHl" secondAttribute="trailing" constant="10" id="1fw-BW-NPk"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="IcC-2u-ZHl" secondAttribute="bottom" constant="10" id="Nte-Ph-1lz"/>
                                                 <constraint firstItem="IcC-2u-ZHl" firstAttribute="leading" secondItem="jpP-1E-2sZ" secondAttribute="trailing" constant="25" id="Syj-Fn-oOT"/>
                                                 <constraint firstItem="jpP-1E-2sZ" firstAttribute="leading" secondItem="PX2-jN-m8C" secondAttribute="leadingMargin" constant="10" id="ard-vs-gV8"/>
+                                                <constraint firstItem="e5I-N4-hLP" firstAttribute="leading" secondItem="PX2-jN-m8C" secondAttribute="leading" constant="15.5" id="eQ7-nF-S5t"/>
+                                                <constraint firstItem="e5I-N4-hLP" firstAttribute="top" secondItem="PX2-jN-m8C" secondAttribute="top" constant="12" id="j4v-wC-1rr"/>
                                                 <constraint firstItem="IcC-2u-ZHl" firstAttribute="top" secondItem="PX2-jN-m8C" secondAttribute="topMargin" constant="10" id="v3s-HY-P0e"/>
                                                 <constraint firstItem="jpP-1E-2sZ" firstAttribute="top" secondItem="PX2-jN-m8C" secondAttribute="topMargin" constant="10" id="vn3-hB-CsG"/>
                                             </constraints>
@@ -79,6 +119,7 @@
                                             <outlet property="dateTimeLabel" destination="f4D-i7-65t" id="orZ-h9-i1i"/>
                                             <outlet property="eventImage" destination="jpP-1E-2sZ" id="TVR-er-3BS"/>
                                             <outlet property="eventLabel" destination="dSd-1b-RHO" id="nWj-gO-Nhx"/>
+                                            <outlet property="favoriteHeartImage" destination="e5I-N4-hLP" id="BLo-5e-JE3"/>
                                             <outlet property="locationLabel" destination="GD9-6M-qUQ" id="Qik-fx-PKm"/>
                                         </connections>
                                     </tableViewCell>
@@ -91,10 +132,14 @@
                             <constraint firstItem="a5h-b3-ge0" firstAttribute="trailing" secondItem="YGd-ga-Oe1" secondAttribute="trailing" id="3AS-Tq-ZW2"/>
                             <constraint firstItem="Stf-5X-pjk" firstAttribute="top" secondItem="a5h-b3-ge0" secondAttribute="bottom" id="OwO-W3-KOx"/>
                             <constraint firstItem="YGd-ga-Oe1" firstAttribute="bottom" secondItem="Stf-5X-pjk" secondAttribute="bottom" id="QgM-iQ-oT3"/>
+                            <constraint firstItem="YGd-ga-Oe1" firstAttribute="trailing" secondItem="kB0-XR-5Kl" secondAttribute="trailing" id="RzW-Qc-hcx"/>
+                            <constraint firstItem="kB0-XR-5Kl" firstAttribute="leading" secondItem="YGd-ga-Oe1" secondAttribute="leading" id="YOc-5j-GGq"/>
                             <constraint firstItem="Stf-5X-pjk" firstAttribute="leading" secondItem="YGd-ga-Oe1" secondAttribute="leading" id="cY8-SX-N2i"/>
                             <constraint firstItem="YGd-ga-Oe1" firstAttribute="trailing" secondItem="Stf-5X-pjk" secondAttribute="trailing" id="e2G-JC-jr3"/>
+                            <constraint firstItem="YGd-ga-Oe1" firstAttribute="bottom" secondItem="kB0-XR-5Kl" secondAttribute="bottom" id="qXq-QM-bcU"/>
                             <constraint firstItem="a5h-b3-ge0" firstAttribute="leading" secondItem="YGd-ga-Oe1" secondAttribute="leading" id="rJc-CL-YL1"/>
                             <constraint firstItem="a5h-b3-ge0" firstAttribute="top" secondItem="YGd-ga-Oe1" secondAttribute="top" constant="10" id="rjM-hM-UYs"/>
+                            <constraint firstItem="kB0-XR-5Kl" firstAttribute="top" secondItem="a5h-b3-ge0" secondAttribute="bottom" id="uEz-FM-paM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Seat Geek" id="HAS-2K-BbU"/>
@@ -106,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LN0-iV-WbQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-33" y="75"/>
+            <point key="canvasLocation" x="-33.333333333333336" y="75"/>
         </scene>
         <!--Details-->
         <scene sceneID="AO6-4e-wyQ">
@@ -127,20 +172,13 @@
                                     <action selector="backButtonClicked" destination="fk6-t6-68V" eventType="touchUpInside" id="9hT-Fk-gtT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syn-Z7-fUW" userLabel="Favorite Button">
-                                <rect key="frame" x="368" y="65" width="26" height="22"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" image="heart" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Event" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sr3-Ky-emG" userLabel="Event Label">
-                                <rect key="frame" x="60" y="61" width="283" height="29"/>
+                                <rect key="frame" x="60" y="61" width="279" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bryant-denny" translatesAutoresizingMaskIntoConstraints="NO" id="ISw-OX-d15" userLabel="Event Image">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No-Image-Found" translatesAutoresizingMaskIntoConstraints="NO" id="ISw-OX-d15" userLabel="Event Image">
                                 <rect key="frame" x="20" y="130" width="374" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ISw-OX-d15" secondAttribute="height" multiplier="187:120" id="xn8-at-QAs"/>
@@ -158,6 +196,16 @@
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syn-Z7-fUW" userLabel="Favorite Button">
+                                <rect key="frame" x="364" y="65" width="30" height="26"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" image="heart.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="favoriteButtonClicked" destination="fk6-t6-68V" eventType="touchUpInside" id="8Mr-he-kQJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MXh-kD-Xth"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -195,9 +243,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bryant-denny" width="500" height="300"/>
+        <image name="No-Image-Found" width="166.5" height="166.5"/>
+        <image name="No-Search-Results" width="375" height="161.5"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
-        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -206,6 +255,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

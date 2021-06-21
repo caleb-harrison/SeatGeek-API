@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class EventTableViewCell: UITableViewCell {
     
@@ -15,6 +16,35 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet var dateTimeLabel: UILabel!
     
     @IBOutlet var eventImage: UIImageView!
+    @IBOutlet var favoriteHeartImage: UIImageView!
+    
+    func setupEventTableViewCell(event: Event, favoritedEventIDs: [NSManagedObject]) {
+        // Setup labels
+        eventLabel.text = event.title
+        locationLabel.text = event.formatLocation()
+        dateTimeLabel.text = event.formatDateTime()
+        
+        // Setup event image
+        eventImage.loadImage(from: event.performers.first!.image!)
+        
+        // Setup favorite heart
+        var favorited = false
+        for eventID in favoritedEventIDs {
+            if eventID.value(forKeyPath: "eventID") as? Int == event.id {
+                favorited = true
+            }
+        }
+        
+        if !favorited {
+            favoriteHeartImage.isHidden = true
+        }
+        else {
+            favoriteHeartImage.isHidden = false
+        }
+        
+        // Add word wrapping to labels
+        setupWordWrapping()
+    }
     
     func setupWordWrapping() {
         eventLabel.numberOfLines = 0
@@ -29,7 +59,6 @@ class EventTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         roundImageCorners()
     }
 }

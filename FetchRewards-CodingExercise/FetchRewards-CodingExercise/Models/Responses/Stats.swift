@@ -9,10 +9,10 @@ import Foundation
 
 struct Stats: Codable {
     
-    let listing_count: Int
-    let average_price: Int
-    let lowest_price: Int
-    let highest_price: Int
+    let listing_count: Int?
+    let average_price: Int?
+    let lowest_price: Int?
+    let highest_price: Int?
     
     private enum CodingKeys: String, CodingKey {
         case listing_count

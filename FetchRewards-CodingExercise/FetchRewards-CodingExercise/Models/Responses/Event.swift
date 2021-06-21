@@ -10,7 +10,7 @@ import Foundation
 struct Event: Codable {
     
     // Summary information about currently available ticket listings for the event
-    //let stats: Stats
+    let stats: Stats?
     
     // The title of the event
     let title: String
@@ -47,7 +47,7 @@ struct Event: Codable {
     let id: Int
     
     private enum CodingKeys: String, CodingKey {
-        //case stats
+        case stats
         case title
         case url
         case datetime_local
@@ -66,23 +66,20 @@ struct Event: Codable {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         let date = dateFormatter.date(from: datetime_local)
-        var dateTimeString = ""
+        var dateTimeString: String!
         
-        if date_tbd && time_tbd{
-            dateTimeString = "Estimated: "
-            dateFormatter.dateFormat = "EEEE, d MMMM yyyy"
-            dateTimeString.append("\n\(dateFormatter.string(from: date!))\nTime: TBD")
+        if date_tbd && time_tbd {
+            dateFormatter.dateFormat = "EEEE, MMMM d, yyyy"
+            dateTimeString = "\(dateFormatter.string(from: date!))\nTime: TBD"
         } else if date_tbd && !time_tbd {
-            dateTimeString = "Estimated: "
-            dateFormatter.dateFormat = "EEEE, d MMMM yyyy \nh:mm a"
-            dateTimeString.append("\n\(dateFormatter.string(from: date!))")
-            
+            dateFormatter.dateFormat = "EEEE, MMMM d, yyyy\nh:mm a"
+            dateTimeString = dateFormatter.string(from: date!)
         } else if time_tbd {
-            dateFormatter.dateFormat = "EEEE, d MMMM yyyy"
+            dateFormatter.dateFormat = "EEEE, MMMM d, yyyy"
             dateTimeString = dateFormatter.string(from: date!)
             dateTimeString.append("\nTime: TBD")
         } else {
-            dateFormatter.dateFormat = "EEEE, d MMMM yyyy \nh:mm a"
+            dateFormatter.dateFormat = "EEEE, MMMM d, yyyy\nh:mm a"
             dateTimeString = dateFormatter.string(from: date!)
         }
         
@@ -90,7 +87,20 @@ struct Event: Codable {
     }
     
     func formatLocation() -> String {
-        return "\(venue.city), \(venue.state)"
+        // Null safety
+        let city = ( venue.city != nil ? venue.city! : "" )
+        let state = ( venue.state != nil ? venue.state! : "" )
+        
+        // Format location based on possible null values
+        if (city != "" && state != "") {
+            return "\(city), \(state)"
+        } else if (city == "" && state != "") {
+            return "\(state)"
+        } else if (city != "" && state == "") {
+            return "\(city)"
+        } else {
+            return "Location: TBD"
+        }
     }
     
 }

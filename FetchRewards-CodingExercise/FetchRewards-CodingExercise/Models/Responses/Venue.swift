@@ -9,22 +9,12 @@ import Foundation
 
 struct Venue: Codable {
     
-    let city: String
-    let name: String
-    let extended_address: String
-    let url: String
-    let country: String
-    let state: String
-    let id: Int
+    let city: String?
+    let state: String?
     
     private enum CodingKeys: String, CodingKey {
         case city
-        case name
-        case extended_address
-        case url
-        case country
         case state
-        case id
     }
     
 }
