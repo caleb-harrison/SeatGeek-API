@@ -183,8 +183,7 @@ Project Link: [https://github.com/caleb-harrison/FetchRewards-Coding-Exercise](h
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[commits]: https://img.shields.io/github/commit-activity/m/caleb-harrison/FetchRewards-Coding-Exercise?label=Commits&style=for-the-badge?foo=bar
-
+[commits]: https://img.shields.io/github/commit-activity/m/caleb-harrison/FetchRewards-Coding-Exercise?foo=bar&label=Commits&style=for-the-badge
 [platform-image]: https://img.shields.io/badge/Platform-iOS-blue.svg?style=for-the-badge
 
 [license-shield]: https://img.shields.io/github/license/caleb-harrison/FetchRewards-Coding-Exercise?style=for-the-badge
