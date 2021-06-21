@@ -192,6 +192,6 @@ Project Link: [https://github.com/caleb-harrison/FetchRewards-Coding-Exercise](h
 [issues-shield]: https://img.shields.io/github/issues/caleb-harrison/repo.svg?style=for-the-badge
 [issues-url]: https://github.com/caleb-harrison/repo/issues
 [license-shield]: https://img.shields.io/github/license/caleb-harrison/repo.svg?style=for-the-badge
-[license-url]: https://github.com/caleb-harrison/repo/blob/master/LICENSE.txt
+[license-url]: https://github.com/caleb-harrison/FetchRewards-Coding-Exercise/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/caleb-harrison
