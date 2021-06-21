@@ -21,10 +21,12 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 <!-- ![Commits][commits-shield] -->
-![Platform][platform-image]
-[![Swift Version][swift-image]][swift-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+<p align="center">
+	![Platform][platform-image]
+	[![Swift Version][swift-image]][swift-url]
+	[![MIT License][license-shield]][license-url]
+	[![LinkedIn][linkedin-shield]][linkedin-url]
+</p>
 
 
 
