@@ -9,8 +9,8 @@ import Foundation
 
 struct Venue: Codable {
     
-    let city: String?
-    let state: String?
+    public let city: String?
+    public let state: String?
     
     private enum CodingKeys: String, CodingKey {
         case city

@@ -14,24 +14,26 @@ class DetailViewController: UIViewController {
     var favoritedEvent = false
     var favoritedEventIDs: [NSManagedObject] = []
     
+    // Event information
     @IBOutlet var eventLabel: UILabel!
     @IBOutlet var dateTimeLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
-    
     @IBOutlet var eventImage: UIImageView!
     
     @IBOutlet var favoriteButton: UIButton!
+    @IBOutlet var buyButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupFavoriteButton()
+        setupBuyButton()
         setupLabels()
         setupImage()
         setupWordWrapping()
     }
     
-    func setupFavoriteButton() {
+    private func setupFavoriteButton() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -52,29 +54,41 @@ class DetailViewController: UIViewController {
         
         if (favoritedEvent) {
             // Show red heart
-            //favoriteButton.setImage(UIImage(named: "heart")?.withRenderingMode(.alwaysOriginal), for: .normal)
             favoriteButton.tintColor = UIColor.systemRed
+            favoriteButton.setImage(UIImage(systemName: "heart.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
         } else {
             // Show empty heart
-            //favoriteButton.setImage(UIImage(named: "heart")?.withRenderingMode(.alwaysOriginal), for: .normal)
             favoriteButton.tintColor = UIColor.label
+            favoriteButton.setImage(UIImage(systemName: "heart")?.withRenderingMode(.alwaysTemplate), for: .normal)
         }
     }
     
-    func toggleFavorite() {
+    private func setupBuyButton() {
+        buyButton.layer.cornerRadius = 30
+        buyButton.clipsToBounds = true
+    }
+    
+    @IBAction func buyTicketButtonClicked() {
+        if let url = URL(string: selectedEvent.url) {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    private func toggleFavorite() {
         favoritedEvent.toggle()
         
         if (favoritedEvent) {
             // Show red heart and save changes
-            //favoriteButton.setImage(UIImage(named: "heart")?.withRenderingMode(.alwaysOriginal), for: .normal)
-            // save to database
-            saveFavorite()
+            print("Favorited event: \(selectedEvent.title)")
             favoriteButton.tintColor = UIColor.systemRed
+            favoriteButton.setImage(UIImage(systemName: "heart.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            saveFavorite()
         } else {
+            print("Unfavorited event: \(selectedEvent.title)")
             // Show empty heart and delete favorite
-            //favoriteButton.setImage(UIImage(named: "heart")?.withRenderingMode(.alwaysOriginal), for: .normal)
-            deleteFavorite()
             favoriteButton.tintColor = UIColor.label
+            favoriteButton.setImage(UIImage(systemName: "heart")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            deleteFavorite()
         }
     }
     
@@ -82,12 +96,13 @@ class DetailViewController: UIViewController {
         toggleFavorite()
     }
     
-    // Function to save an Event's ID to the Favorited Events in CoreData
-    func saveFavorite() {
+    private func saveFavorite() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
+        
         let entity = NSEntityDescription.entity(forEntityName: "FavoritedEvent", in: managedContext)!
         let favoritedEvent = NSManagedObject(entity: entity, insertInto: managedContext)
+        
         favoritedEvent.setValue(selectedEvent.id, forKeyPath: "eventID")
         
         do {
@@ -97,8 +112,7 @@ class DetailViewController: UIViewController {
         }
     }
     
-    // Function to delete an Event's ID from the Favorited Events in CoreData
-    func deleteFavorite() {
+    private func deleteFavorite() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
         
@@ -114,35 +128,32 @@ class DetailViewController: UIViewController {
         }
     }
     
-    func setupLabels() {
+    private func setupLabels() {
         eventLabel.text = selectedEvent.title
         dateTimeLabel.text = formatDateTime()
         locationLabel.text = formatLocation()
     }
     
-    func setupImage() {
+    private func setupImage() {
         eventImage.loadImage(from: selectedEvent.performers.first!.image!)
     }
     
-    func formatDateTime() -> String {
+    private func formatDateTime() -> String {
         return selectedEvent.formatDateTime()
     }
     
-    func formatLocation() -> String {
+    private func formatLocation() -> String {
         return selectedEvent.formatLocation()
     }
     
-    func setupWordWrapping() {
+    private func setupWordWrapping() {
         eventLabel.numberOfLines = 0
         dateTimeLabel.numberOfLines = 0
         locationLabel.numberOfLines = 0
     }
     
     @IBAction func backButtonClicked() {
-        self.dismiss(animated: true, completion: {
-            // reload table view data and check if favorited
-            // save to database?
-        })
+        self.dismiss(animated: true, completion: {})
     }
     
 }

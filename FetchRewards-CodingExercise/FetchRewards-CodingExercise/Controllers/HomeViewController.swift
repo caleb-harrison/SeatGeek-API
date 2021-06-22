@@ -22,30 +22,33 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Setup tableview
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // Setup searchbar
         searchBar.delegate = self
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        getEvents()
+        // Ensures back button maintains same events as search
+        searchEvents(url: createSearchURL(search: searchBar.text ?? ""))
         getFavorites()
     }
     
     // MARK: - SeatGeek API Configuration
     
-    // REDO
-    func getEvents() {
+    private func getEvents() {
         guard let url = URL(string: "https://api.seatgeek.com/2/events?client_id=\(clientID)") else { return }
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
             do {
                 let decoder = JSONDecoder()
-                let eventsData = try decoder.decode(Events.self, from: data)
-                self.events = eventsData
+                let eventsResponse = try decoder.decode(Events.self, from: data)
+                self.events = eventsResponse
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -58,8 +61,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         task.resume()
     }
     
-    // REDO
-    func getFavorites() {
+    private func getFavorites() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -73,25 +75,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    // REDO
-    // Function to build an API request URL from the Search Bar Text
-    func createSearchURL(searchText: String) -> URL {
-        var searchQuery = "https://api.seatgeek.com/2/events?client_id=\(clientID)&q="
-        searchQuery.append(searchText.replacingOccurrences(of: " ", with: "+").lowercased())
-        
-        return URL(string: searchQuery)!
+    private func createSearchURL(search: String) -> URL {
+        let query = "https://api.seatgeek.com/2/events?client_id=\(clientID)&q=\(search.replacingOccurrences(of: " ", with: "+").lowercased())"
+        return URL(string: query)!
     }
     
-    // REDO
-    // Function to search the SeatGeek API
-    func searchEvents(url: URL) {
+    private func searchEvents(url: URL) {
         let search = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
             
             do {
                 let decoder = JSONDecoder()
-                let eventsData = try decoder.decode(Events.self, from: data)
-                self.events = eventsData
+                let searchResponse = try decoder.decode(Events.self, from: data)
+                self.events = searchResponse
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -106,8 +102,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: - Search Bar Configuration
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchEvents(url: createSearchURL(searchText: searchText))
+    func searchBar(_ searchBar: UISearchBar, textDidChange search: String) {
+        searchEvents(url: createSearchURL(search: search))
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -138,14 +134,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let count = events.events.count
-        return count
+        return events.events.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventTableViewCell", for: indexPath) as! EventTableViewCell
         
-        if (events.events.count >= indexPath.row) {
+        if (events.events.count >= indexPath.row + 1) {
             cell.setupEventTableViewCell(event: events.events[indexPath.row], favoritedEventIDs: favoritedEvents)
         }
 
@@ -164,7 +159,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    func deleteAll() {
+    // Emergency method to clear database
+    private func deleteAll() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         let managedContext = appDelegate.persistentContainer.viewContext

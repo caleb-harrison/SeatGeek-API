@@ -16,7 +16,7 @@ class LaunchScreenViewController: UIViewController {
         return imageView
     }()
     
-    func animate() {
+    private func animate() {
         // Zoom in
         UIView.animate(withDuration: 1, animations: {
             let size = self.view.frame.size.width * 2.5
@@ -38,9 +38,7 @@ class LaunchScreenViewController: UIViewController {
             
             // Present home screen
             if done {
-                DispatchQueue.main.asyncAfter(deadline: .now()+0.5, execute: {
-                    self.performSegue(withIdentifier: "GoToHome", sender: self)
-                })
+                self.performSegue(withIdentifier: "GoToHome", sender: self)
             }
         })
         
@@ -48,16 +46,15 @@ class LaunchScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(imageView)
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        imageView.center = view.center
+        view.addSubview(imageView)// Delay animation
         
-        // Delay animation
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5, execute: {
             self.animate()
         })
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        imageView.center = view.center
     }
 }

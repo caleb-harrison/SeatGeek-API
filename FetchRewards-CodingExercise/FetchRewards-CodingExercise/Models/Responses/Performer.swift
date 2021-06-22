@@ -8,5 +8,5 @@
 import Foundation
 
 struct Performer: Codable {
-    let image: String?
+    public let image: String?
 }
