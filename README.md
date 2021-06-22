@@ -32,7 +32,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/caleb-harrison/FetchRewards-Coding-Exercise">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="Assets/App Icon/App-Icon.png" alt="App Icon" width="80" height="80">
   </a>
 
   <h3 align="center">Fetch Rewards Coding Exercise</h3>
