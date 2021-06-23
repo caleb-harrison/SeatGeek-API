@@ -73,7 +73,7 @@
 
 
 
-## About The Project
+## 🔍 About The Project
 
 This Swift project was assigned as a coding exercise from Fetch Rewards. 
 
@@ -95,7 +95,7 @@ This Swift project was assigned as a coding exercise from Fetch Rewards.
 
 
 
-## Getting Started
+## ⚡ Getting Started
 
 To get a local copy up and running follow these simple steps.
 
@@ -123,17 +123,17 @@ Use this space to show useful examples of how a project can be used. Additional 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 
-## License
+## 📄 License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
-## Developer Notes
+## 🗣️ Developer Notes
 
 I loved the project.
 
 
-## Contact
+## 📥 Contact
 
 Caleb Harrison - calebpharrison@gmail.com
 
