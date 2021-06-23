@@ -21,10 +21,16 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 <!-- ![Commits][commits-shield] -->
-![Platform][platform-image]
+<!-- ![Platform][platform-image]
 [![Swift Version][swift-image]][swift-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][linkedin-url] -->
+<p align="center">
+    <img src="https://img.shields.io/badge/Platform-iOS-blue.svg?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/Swift-5.3.2-green.svg?style=for-the-badge" />
+    <img src="https://img.shields.io/github/license/caleb-harrison/FetchRewards-Coding-Exercise?color=red&style=for-the-badge" />
+    <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" />
+</p>
 
 
 <br />
@@ -153,7 +159,7 @@ LinkedIn: [https://www.linkedin.com/in/calebharrison0/](https://www.linkedin.com
 
 [platform-image]: https://img.shields.io/badge/Platform-iOS-blue.svg?style=for-the-badge
 
-[swift-image]:https://img.shields.io/badge/Swift-5.3.2-green.svg?style=for-the-badge
+[swift-image]: https://img.shields.io/badge/Swift-5.3.2-green.svg?style=for-the-badge
 [swift-url]: https://swift.org/
 
 [license-shield]: https://img.shields.io/github/license/caleb-harrison/FetchRewards-Coding-Exercise?color=red&style=for-the-badge
