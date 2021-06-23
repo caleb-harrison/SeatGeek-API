@@ -60,20 +60,19 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#requirements">Built With</a></li>
+        <li><a href="#features-showcase">Features Showcase</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#usage">Usage</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
+    <li><a href="#notes-from-developer">Notes from Developer</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -85,16 +84,9 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`caleb-harrison`, `FetchRewards-Coding-Exercise`, `twitter_handle`, `calebpharrison@gmail.com`, `project_title`, `project_description`
+### Requirements
 
-
-### Built With
-
-* []()
-* []()
-* []()
+### Feature Showcase
 
 
 
@@ -114,20 +106,12 @@ To get a local copy up and running follow these simple steps.
    ```sh
    open FetchRewards-CodingExercise/FetchRewards-CodingExercise.xcodeproj
    ```
+3. Select your desired device simulator and run the application (⌘Command + R)
+
 *Note: If you would like to check out recommendation features, favorite an event and check "Simulator" -> "Debug" -> "Location" to change the location.*
 
 
-## Features
-
-- Test
-- Test
-- Test
-- Test
-- Test
-- Test
-- Test
-
-## Usage
+### Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
