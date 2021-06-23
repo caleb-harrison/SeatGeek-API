@@ -20,11 +20,9 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-<!-- ![Commits][commits-shield] -->
-<!-- ![Platform][platform-image]
-[![Swift Version][swift-image]][swift-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url] -->
+<p align="center">
+  <img src="Assets/Coding-Exercise-Logo.png" alt="Coding Exercise Logo" height="300">
+</p>
 <p align="center">
     <img src="https://img.shields.io/badge/Platform-iOS-blue.svg?style=for-the-badge" />
     <a href="https://swift.org/">
