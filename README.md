@@ -92,7 +92,12 @@ This Swift project was assigned as a coding exercise from Fetch Rewards.
 - [x] Application must compile with Xcode 12.x.x
 
 ### Feature Showcase
-
+![Dark Location](Assets/Features/Dark-Location.png) / ![](Assets/Features/Dark-Location.png)
+![Light Launch Animation](Assets/Gifs/Light-LaunchAnimation.gif) / ![](Assets/Gifs/Light-LaunchAnimation.gif)
+![Dark Mode](Assets/Gifs/Dark-LaunchAnimation.gif) / ![](Assets/Gifs/Dark-LaunchAnimation.gif)
+![Light Favorite](Assets/Gifs/Light-Favorite.gif) / ![](Assets/Gifs/Light-Favorite.gif)
+![Dark Recommended](Assets/Gifs/Dark-Recommended.gif) / ![](Assets/Gifs/Dark-Recommended.gif)
+![Light Buy](Assets/Gifs/Light-Buy.gif) / ![](Assets/Gifs/Light-Buy.gif)
 
 
 ## ⚡ Getting Started
