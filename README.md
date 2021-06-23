@@ -140,11 +140,12 @@ The API brought me a few challenges that I was able to overcome such as:
 
 Although these challenges were something I hadn't done before, I was quickly able to break down what I wanted to accomplish, do research, and eventually implement the solution. 
 
-This project, among others in the last 6-8 months, have highlighted to me that iOS app development is what I love to do. I have tried many types of software development and explored other computer science options. However, mobile application development–specifically iOS app development–brings together all of my favorite portions of development. Working for a company such as Fetch Rewards being able to do what I love would be a dream come true.
+**This project, among others in the last 6-8 months, have highlighted to me that iOS app development is what I love to do and what best encapsulates my skillset. I have tried many types of software development and explored other computer science options and mobile application development–specifically iOS app development–brings together all of my favorite portions of development. Mobile app development allows me to constantly show my eye for design while also being able to solve real-world problems and see them unfold before my eyes as I progress.**
 
-I hope that my passion can be conveyed in my work here and potentially further in a future conversation! Thank you so much for taking the time to review my submission.
+**Working for a company such as Fetch Rewards while being able to do what I love would be a dream come true.
+I hope that my passion can be conveyed in my work here and potentially further in a future conversation! Thank you so much for taking the time to review my submission.**
 
-– Caleb Harrison ❤️
+**– Caleb Harrison ❤️**
 
 ## 📥 Contact
 
