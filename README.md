@@ -20,9 +20,10 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-<p align="center">
-  <img src="Assets/Coding-Exercise-Logo.png" alt="Coding Exercise Logo" height="300">
-</p>
+<h1 align="center">
+  <img src="Assets/Coding-Exercise-Logo.png" alt="Coding Exercise Logo" height="300"><br/>
+  Fetch Rewards Coding Exercise
+</h1>
 <p align="center">
     <img src="https://img.shields.io/badge/Platform-iOS-blue.svg?style=for-the-badge" />
     <a href="https://swift.org/">
@@ -39,8 +40,6 @@
 
 <br />
 <p align="center">
-  <h3 align="center">Fetch Rewards Coding Exercise</h3>
-
   <p align="center">
     iOS application that consumes the open-source SeatGeek API and displays events in a UITableView. The application fetches relevant events from SeatGeek API while user is typing in the search bar.
     <br />
