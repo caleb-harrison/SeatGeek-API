@@ -22,8 +22,16 @@
 -->
 <h1 align="center">
   <img src="Assets/Coding-Exercise-Logo.png" alt="Coding Exercise Logo" height="300"><br/>
-  Fetch Rewards Coding Exercise
 </h1>
+
+<p align="center">
+  <p align="center">
+    iOS application that consumes the open-source SeatGeek API and displays events in a UITableView. The application fetches relevant events from SeatGeek API while user is typing in the search bar.
+    <br />
+    <a href="#about-the-project"><strong>Explore the documentation »</strong></a>
+  </p>
+</p>
+
 <p align="center">
     <img src="https://img.shields.io/badge/Platform-iOS-blue.svg?style=for-the-badge" />
     <a href="https://swift.org/">
@@ -39,13 +47,6 @@
 
 
 <br />
-<p align="center">
-  <p align="center">
-    iOS application that consumes the open-source SeatGeek API and displays events in a UITableView. The application fetches relevant events from SeatGeek API while user is typing in the search bar.
-    <br />
-    <a href="#about-the-project"><strong>Explore the documentation »</strong></a>
-  </p>
-</p>
 
 
 
