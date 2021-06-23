@@ -44,14 +44,9 @@
   <p align="center">
     iOS application that consumes the open-source SeatGeek API and displays events in a UITableView. The application fetches relevant events from SeatGeek API while user is typing in the search bar.
     <br />
-    <a href="https://github.com/caleb-harrison/FetchRewards-Coding-Exercise"><strong>Explore the docs »</strong></a>
+    <a href="#about-the-project"><strong>Explore the documentation »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/caleb-harrison/FetchRewards-Coding-Exercise">View Demo</a>
-    ·
-    <a href="https://github.com/caleb-harrison/FetchRewards-Coding-Exercise/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/caleb-harrison/FetchRewards-Coding-Exercise/issues">Request Feature</a>
   </p>
 </p>
 
