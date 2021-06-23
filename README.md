@@ -138,7 +138,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
-## Notes from Developer
+## Comments
 
 I loved the project.
 

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="B0Q-Mg-tvX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -109,7 +110,7 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bryant-Denny" translatesAutoresizingMaskIntoConstraints="NO" id="jpP-1E-2sZ" userLabel="Event Image">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No-Image-Found" translatesAutoresizingMaskIntoConstraints="NO" id="jpP-1E-2sZ" userLabel="Event Image">
                                                     <rect key="frame" x="30" y="21" width="90" height="90"/>
                                                     <color key="tintColor" systemColor="labelColor"/>
                                                     <constraints>
@@ -118,8 +119,12 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="e5I-N4-hLP">
-                                                    <rect key="frame" x="15.5" y="11" width="30" height="26"/>
+                                                    <rect key="frame" x="15.5" y="11" width="30" height="30"/>
                                                     <color key="tintColor" systemColor="systemRedColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="e5I-N4-hLP" secondAttribute="height" multiplier="289:271" id="Gaa-y9-UPc"/>
+                                                        <constraint firstAttribute="width" constant="30" id="oRK-Gl-uau"/>
+                                                    </constraints>
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large"/>
                                                 </imageView>
                                             </subviews>
@@ -182,6 +187,10 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plf-3D-UYF" userLabel="Back Button">
                                 <rect key="frame" x="20" y="64" width="14.5" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="ELV-sG-cdo"/>
+                                    <constraint firstAttribute="width" constant="14.5" id="jAF-NR-BJn"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" image="chevron.backward" catalog="system">
                                     <color key="titleColor" systemColor="labelColor"/>
@@ -218,6 +227,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syn-Z7-fUW" userLabel="Favorite Button">
                                 <rect key="frame" x="364" y="65" width="30" height="26"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="36F-eO-Upa"/>
                                     <constraint firstAttribute="width" constant="30" id="ZZv-Ep-end"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="systemRedColor"/>
@@ -271,6 +281,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="DmX-S9-zLn"/>
                     <connections>
+                        <outlet property="backButton" destination="plf-3D-UYF" id="dw3-z5-Q2k"/>
                         <outlet property="buyButton" destination="63A-nC-kEv" id="Cs6-l5-Xt9"/>
                         <outlet property="dateTimeLabel" destination="Pzv-su-HMO" id="ada-UR-dSU"/>
                         <outlet property="eventImage" destination="ISw-OX-d15" id="qqV-qh-H29"/>
@@ -285,7 +296,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Bryant-Denny" width="500" height="300"/>
         <image name="No-Image-Found" width="166.5" height="166.5"/>
         <image name="No-Search-Results" width="375" height="161.5"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>

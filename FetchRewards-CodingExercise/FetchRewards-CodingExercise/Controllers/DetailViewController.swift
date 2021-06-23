@@ -20,6 +20,7 @@ class DetailViewController: UIViewController {
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var eventImage: UIImageView!
     
+    @IBOutlet var backButton: UIButton!
     @IBOutlet var favoriteButton: UIButton!
     @IBOutlet var buyButton: UIButton!
     
@@ -27,6 +28,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         setupFavoriteButton()
+        setupBackButton()
         setupBuyButton()
         setupLabels()
         setupImage()
@@ -55,11 +57,26 @@ class DetailViewController: UIViewController {
         if (favoritedEvent) {
             // Show red heart
             favoriteButton.tintColor = UIColor.systemRed
-            favoriteButton.setImage(UIImage(systemName: "heart.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            if #available(iOS 13.0, *) {
+                favoriteButton.setImage(UIImage(systemName: "heart.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            } else {
+                // Fallback on earlier versions
+                favoriteButton.setImage(UIImage(named: "Heart-Fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            }
         } else {
             // Show empty heart
-            favoriteButton.tintColor = UIColor.label
-            favoriteButton.setImage(UIImage(systemName: "heart")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            if #available(iOS 13.0, *) {
+                favoriteButton.tintColor = UIColor.label
+            } else {
+                // Fallback on earlier versions
+                favoriteButton.tintColor = UIColor.black
+            }
+            if #available(iOS 13.0, *) {
+                favoriteButton.setImage(UIImage(systemName: "heart")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            } else {
+                // Fallback on earlier versions
+                favoriteButton.setImage(UIImage(named: "Heart")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            }
         }
     }
     
@@ -81,13 +98,28 @@ class DetailViewController: UIViewController {
             // Show red heart and save changes
             print("Favorited event: \(selectedEvent.title)")
             favoriteButton.tintColor = UIColor.systemRed
-            favoriteButton.setImage(UIImage(systemName: "heart.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            if #available(iOS 13.0, *) {
+                favoriteButton.setImage(UIImage(systemName: "heart.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            } else {
+                // Fallback on earlier versions
+                favoriteButton.setImage(UIImage(named: "Heart-Fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            }
             saveFavorite()
         } else {
             print("Unfavorited event: \(selectedEvent.title)")
             // Show empty heart and delete favorite
-            favoriteButton.tintColor = UIColor.label
-            favoriteButton.setImage(UIImage(systemName: "heart")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            if #available(iOS 13.0, *) {
+                favoriteButton.tintColor = UIColor.label
+            } else {
+                // Fallback on earlier versions
+                favoriteButton.tintColor = UIColor.black
+            }
+            if #available(iOS 13.0, *) {
+                favoriteButton.setImage(UIImage(systemName: "heart")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            } else {
+                // Fallback on earlier versions
+                favoriteButton.setImage(UIImage(named: "Heart")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            }
             deleteFavorite()
         }
     }
@@ -150,6 +182,15 @@ class DetailViewController: UIViewController {
         eventLabel.numberOfLines = 0
         dateTimeLabel.numberOfLines = 0
         locationLabel.numberOfLines = 0
+    }
+    
+    private func setupBackButton() {
+        if #available(iOS 13.0, *) {
+            backButton.setImage(UIImage(systemName: "chevron.backward")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        } else {
+            // Fallback on earlier versions
+            backButton.setImage(UIImage(named: "Chevron-Backward")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        }
     }
     
     @IBAction func backButtonClicked() {

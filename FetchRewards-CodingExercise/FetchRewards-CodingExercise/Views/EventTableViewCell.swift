@@ -35,6 +35,13 @@ class EventTableViewCell: UITableViewCell {
             }
         }
         
+        if #available(iOS 13.0, *) {
+            favoriteHeartImage.image = UIImage(systemName: "heartFill")
+        } else {
+            // Fallback on earlier versions
+            favoriteHeartImage.image = UIImage(named: "Heart-Fill")
+        }
+        
         if !favorited {
             favoriteHeartImage.isHidden = true
         }
