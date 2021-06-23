@@ -92,7 +92,7 @@ This Swift project was assigned as a coding exercise from Fetch Rewards.
 - [x] Application must compile with Xcode 12.x.x
 
 ### Feature Showcase
-<img src="Assets/Features/Dark-Location.png" alt="Dark Location" width="220"/>
+<img src="Assets/Features/Dark-Location.png" alt="Dark Location" width="225"/>
 
 
 
