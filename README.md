@@ -54,7 +54,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#requirements">Built With</a></li>
+        <li><a href="#requirements">Requirements</a></li>
         <li><a href="#features-showcase">Features Showcase</a></li>
       </ul>
     </li>
@@ -77,7 +77,7 @@
 
 This Swift project was assigned as a coding exercise from Fetch Rewards. 
 
-### Requirements Checklist
+### Requirements
 - [x] Consume the open-source SeatGeek API
 - [x] Display events in a UITableView
 - [x] Use UISearchBar placed at the top of the tableview to search for events
