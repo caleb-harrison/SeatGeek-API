@@ -144,7 +144,7 @@ This project, among others in the last 6-8 months, have highlighted to me that i
 
 I hope that my passion can be conveyed in my work here and potentially further in a future conversation! Thank you so much for taking the time to review my submission.
 
-– Caleb Harrison
+– Caleb Harrison ❤️
 
 ## 📥 Contact
 
