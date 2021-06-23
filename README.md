@@ -102,7 +102,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Installation
 
-1. Clone the repo
+1. Clone the repository
    ```sh
    git clone https://github.com/caleb-harrison/FetchRewards-Coding-Exercise.git
    ```
@@ -110,7 +110,7 @@ To get a local copy up and running follow these simple steps.
    ```sh
    open FetchRewards-CodingExercise/FetchRewards-CodingExercise.xcodeproj
    ```
-3. Select your desired device simulator and run the application (⌘Command + R)
+3. **Command (⌘)-R:** Select your desired device simulator and run the application
 
 _Note: If you would like to check out recommendation features, favorite an event and check "Simulator" -> "Debug" -> "Location" to change the location._
 
