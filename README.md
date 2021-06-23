@@ -45,8 +45,6 @@
     iOS application that consumes the open-source SeatGeek API and displays events in a UITableView. The application fetches relevant events from SeatGeek API while user is typing in the search bar.
     <br />
     <a href="#about-the-project"><strong>Explore the documentation »</strong></a>
-    <br />
-    <br />
   </p>
 </p>
 
@@ -71,7 +69,7 @@
       </ul>
     </li>
     <li><a href="#license">License</a></li>
-    <li><a href="#notes-from-developer">Notes from Developer</a></li>
+    <li><a href="#developer-notes">Developer Notes</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -117,7 +115,7 @@ To get a local copy up and running follow these simple steps.
    ```
 3. Select your desired device simulator and run the application (⌘Command + R)
 
-*Note: If you would like to check out recommendation features, favorite an event and check "Simulator" -> "Debug" -> "Location" to change the location.*
+_Note: If you would like to check out recommendation features, favorite an event and check "Simulator" -> "Debug" -> "Location" to change the location._
 
 
 
@@ -126,10 +124,14 @@ To get a local copy up and running follow these simple steps.
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
+
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-## Comments
+
+
+## Developer Notes
 
 I loved the project.
 
