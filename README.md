@@ -93,31 +93,37 @@ This Swift project was assigned as a coding exercise from Fetch Rewards.
 
 ### Feature Showcase
 Get user's location
+
 <img src="Assets/Features/Dark-Location.png" alt="Dark Location" width="223"/>
 
 
 
 Launch screen animation
+
 ![Light Launch Animation](https://media.giphy.com/media/ON2rT5F0aYldLU7Fnb/giphy.gif)
 
 
 
 Dark Mode
+
 ![Dark Mode](https://media.giphy.com/media/F2rTNZJVwj6a76cEfF/giphy.gif)
 
 
 
 Favorite events
+
 ![Light Favorite](https://media.giphy.com/media/WitlCWZur7BAucmMYC/giphy.gif)
 
 
 
 See recommended events from favorite event and location
+
 ![Dark Recommended](https://media.giphy.com/media/ldUTdnpSNNByJrYqqD/giphy.gif)
 
 
 
 Buy tickets from event details screen
+
 ![Light Buy](https://media.giphy.com/media/LsoN1NmgG7JAtn7Vkh/giphy.gif)
 
 
