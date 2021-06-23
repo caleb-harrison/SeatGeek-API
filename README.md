@@ -27,8 +27,6 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-
-<!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/caleb-harrison/FetchRewards-Coding-Exercise">
@@ -38,7 +36,7 @@
   <h3 align="center">Fetch Rewards Coding Exercise</h3>
 
   <p align="center">
-    This is an iOS application that consumes the open-source SeatGeek API and displays events in a UITableView. The application fetches relevant events from SeatGeek API while user is typing in the search bar.
+    iOS application that consumes the open-source SeatGeek API and displays events in a UITableView. The application fetches relevant events from SeatGeek API while user is typing in the search bar.
     <br />
     <a href="https://github.com/caleb-harrison/FetchRewards-Coding-Exercise"><strong>Explore the docs »</strong></a>
     <br />
@@ -79,18 +77,28 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+This Swift project was assigned as a coding exercise from Fetch Rewards. 
 
-### Requirements
+### Requirements Checklist
+- [x] Consume the open-source SeatGeek API
+- [x] Display events in a UITableView
+- [x] Use UISearchBar placed at the top of the tableview to search for events
+- [x] Fetch relevant events from SeatGeek API while user is typing in the search bar
+- [x] Tapping on Event's UITableViewCell should display the corresponding event in a detail screen
+- [x] Tapping on the back button should take the user back to the Event's TableView
+- [x] User should be able to favorite events from the detail screen by hitting the favorite button
+- [x] Favorited events should be displayed on the Event's UITableViewCell
+- [x] User should be able to unfavorite events
+- [x] A favorited event should remain favorited even when searching or closing the application
+- [x] Make sure that the application supports iOS 12 and above
+- [x] Application must compile with Xcode 12.x.x
 
 ### Feature Showcase
 
 
 
-<!-- GETTING STARTED -->
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
