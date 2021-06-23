@@ -26,10 +26,10 @@
 
 <p align="center">
   <p align="center">
-    iOS application that consumes the open-source SeatGeek API
-    and displays events in a UITableView. The application fetches recommended 
+    iOS application that consumes the open-source SeatGeek API<br/>
+    and displays events in a UITableView. The application fetches recommended<br/>
     events from the user's location and relevant events based on search.
-    <br /><br />
+    <br/><br/>
     <a href="#about-the-project"><strong>Explore the documentation »</strong></a>
   </p>
 </p>
