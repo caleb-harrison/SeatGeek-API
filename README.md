@@ -92,11 +92,26 @@ This Swift project was assigned as a coding exercise from Fetch Rewards.
 - [x] Application must compile with Xcode 12.x.x
 
 ### Feature Showcase
-![Dark Location](Assets/Features/Dark-Location.png)
+<img src="Assets/Features/Dark-Location.png" alt="Dark Location" width="200"/>
+
+
+
 ![Light Launch Animation](https://media.giphy.com/media/ON2rT5F0aYldLU7Fnb/giphy.gif)
+
+
+
 ![Dark Mode](https://media.giphy.com/media/F2rTNZJVwj6a76cEfF/giphy.gif)
+
+
+
 ![Light Favorite](https://media.giphy.com/media/WitlCWZur7BAucmMYC/giphy.gif)
+
+
+
 ![Dark Recommended](https://media.giphy.com/media/ldUTdnpSNNByJrYqqD/giphy.gif)
+
+
+
 ![Light Buy](https://media.giphy.com/media/LsoN1NmgG7JAtn7Vkh/giphy.gif)
 
 
