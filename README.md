@@ -125,19 +125,15 @@ To get a local copy up and running follow these simple steps.
 *Note: If you would like to check out recommendation features, favorite an event and check "Simulator" -> "Debug" -> "Location" to change the location.*
 
 
+
 ### Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-
 ## Comments
 
 I loved the project.
