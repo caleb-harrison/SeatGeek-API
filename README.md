@@ -25,10 +25,9 @@
 </h1>
 
 <p align="center">
-  <br />
   <p align="center">
     iOS application that consumes the open-source SeatGeek API and displays events in a UITableView. The application fetches relevant events from SeatGeek API while user is typing in the search bar.
-    <br /><br />
+    <br />
     <a href="#about-the-project"><strong>Explore the documentation »</strong></a>
   </p>
 </p>
