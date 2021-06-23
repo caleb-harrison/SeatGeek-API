@@ -106,5 +106,5 @@ struct Event: Codable {
 }
 
 struct Events: Codable {
-    let events: [Event]
+    var events: [Event]
 }

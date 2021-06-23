@@ -7,14 +7,18 @@
 
 import Foundation
 
-struct Recommendations: Codable {
+struct Recommendation: Codable {
     
     public let event: Event
-    public let state: String?
+    public let score: Int
     
     private enum CodingKeys: String, CodingKey {
         case event
-        case state
+        case score
     }
     
+}
+
+struct Recommendations: Codable {
+    let recommendations: [Recommendation]
 }

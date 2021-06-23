@@ -7,13 +7,18 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, CLLocationManagerDelegate {
     
     private var events = Events(events: [])
+    private var recommendations = Recommendations(recommendations: [])
     private var favoritedEvents: [NSManagedObject] = []
     private var selectedIndex: Int!
+    private var latitude: String = ""
+    private var longitude: String = ""
     
+    var locationManager: CLLocationManager = CLLocationManager()
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
     
@@ -30,12 +35,26 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         searchBar.delegate = self
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Setup location manager
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // Ensures back button maintains same events as search
-        searchEvents(url: createSearchURL(search: searchBar.text ?? ""))
-        getFavorites()
+        if (favoritedEvents.count > 0 && (searchBar.text == "" || searchBar.text == nil) && latitude != "" && longitude != "") {
+            getRecommendations()
+        } else {
+            getFavoritedEventIDs()
+            searchEvents(url: createSearchURL(search: searchBar.text ?? ""))
+        }
     }
     
     // MARK: - SeatGeek API Configuration
@@ -61,7 +80,46 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         task.resume()
     }
     
-    private func getFavorites() {
+    private func getRecommendations() {
+        let eventID: Int!
+        getFavoritedEventIDs()
+        
+        if (favoritedEvents.count > 0 && latitude != "" && longitude != "") {
+            eventID = favoritedEvents.first!.value(forKeyPath: "eventID") as? Int
+            
+            guard let url = URL(string: "https://api.seatgeek.com/2/recommendations?events.id=\( eventID!)&lat=\(latitude)&lon=\(longitude)&client_id=\(clientID)") else { return }
+            
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                guard let data = data else { return }
+                do {
+                    let decoder = JSONDecoder()
+                    let recommendationResponse = try decoder.decode(Recommendations.self, from: data)
+                    self.recommendations = recommendationResponse
+                    
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                } catch let error {
+                    print("Error thrown while fetching data from SeatGeek API: \(error)")
+                }
+            }
+            
+            task.resume()
+            
+            var recommendedEvents = [Event]()
+            for event in self.recommendations.recommendations {
+                recommendedEvents.append(event.event)
+            }
+            
+            self.events.events = recommendedEvents
+            tableView.reloadData()
+        } else {
+            print("No favorited events to get recommendations. Try favoriting an event to get recommendations.")
+            searchEvents(url: createSearchURL(search: searchBar.text ?? ""))
+        }
+    }
+    
+    private func getFavoritedEventIDs() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -103,7 +161,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - Search Bar Configuration
     
     func searchBar(_ searchBar: UISearchBar, textDidChange search: String) {
-        searchEvents(url: createSearchURL(search: search))
+        if (favoritedEvents.count > 0 && searchBar.text == "" && latitude != "" && longitude != "") {
+            getRecommendations()
+        } else {
+            searchEvents(url: createSearchURL(search: search))
+        }
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -145,6 +207,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
 
         return cell
+    }
+    
+    // MARK: - Location Setup
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let first = locations.first else { return }
+        
+        latitude = String(first.coordinate.latitude)
+        longitude = String(first.coordinate.longitude)
+        print("Collected latitude/longitude for recommended events: \(latitude), \(longitude)")
+        
+        if (favoritedEvents.count > 0 && searchBar.text == "" && latitude != "" && longitude != "") {
+            getRecommendations()
+        }
     }
     
     // MARK: - Segue Setup

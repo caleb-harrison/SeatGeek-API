@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C571B462681B3CD00F3C0F0 /* Geolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C571B452681B3CD00F3C0F0 /* Geolocation.swift */; };
+		3C571B4826829A4500F3C0F0 /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C571B4726829A4500F3C0F0 /* Recommendation.swift */; };
 		3CF787BA267D2D3900269D2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF787B9267D2D3900269D2B /* AppDelegate.swift */; };
 		3CF787BC267D2D3A00269D2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF787BB267D2D3A00269D2B /* SceneDelegate.swift */; };
 		3CF787BE267D2D3A00269D2B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF787BD267D2D3A00269D2B /* HomeViewController.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C571B452681B3CD00F3C0F0 /* Geolocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geolocation.swift; sourceTree = "<group>"; };
+		3C571B4726829A4500F3C0F0 /* Recommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recommendation.swift; sourceTree = "<group>"; };
 		3CF787B6267D2D3900269D2B /* FetchRewards-CodingExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FetchRewards-CodingExercise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF787B9267D2D3900269D2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CF787BB267D2D3A00269D2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 				3CF78847267E777A00269D2B /* Stats.swift */,
 				3CF78849267E77CB00269D2B /* Venue.swift */,
 				3CF7884B267E7ABB00269D2B /* Performer.swift */,
+				3C571B4726829A4500F3C0F0 /* Recommendation.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 				3CF7885026801CA400269D2B /* LoadImage.swift */,
 				3CF7885226803FD200269D2B /* EmptyTableView.swift */,
 				3CF788542681157D00269D2B /* ImageBorder.swift */,
+				3C571B452681B3CD00F3C0F0 /* Geolocation.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -340,8 +346,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CF788552681157D00269D2B /* ImageBorder.swift in Sources */,
+				3C571B462681B3CD00F3C0F0 /* Geolocation.swift in Sources */,
 				3CF78844267E4BF800269D2B /* Event.swift in Sources */,
 				3CF7885326803FD200269D2B /* EmptyTableView.swift in Sources */,
+				3C571B4826829A4500F3C0F0 /* Recommendation.swift in Sources */,
 				3CF7884A267E77CB00269D2B /* Venue.swift in Sources */,
 				3CF78848267E777A00269D2B /* Stats.swift in Sources */,
 				3CF787BE267D2D3A00269D2B /* HomeViewController.swift in Sources */,

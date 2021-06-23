@@ -75,7 +75,6 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -157,7 +156,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
@@ -168,16 +167,7 @@ Caleb Harrison - calebpharrison@gmail.com
 
 Project Link: [https://github.com/caleb-harrison/FetchRewards-Coding-Exercise](https://github.com/caleb-harrison/FetchRewards-Coding-Exercise)
 
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
-
-
+LinkedIn: [https://www.linkedin.com/in/calebharrison0/](https://www.linkedin.com/in/calebharrison0/)
 
 
 
