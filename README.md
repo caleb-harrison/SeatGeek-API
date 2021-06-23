@@ -39,10 +39,6 @@
 
 <br />
 <p align="center">
-  <a href="https://github.com/caleb-harrison/FetchRewards-Coding-Exercise">
-    <img src="Assets/App Icon/App-Icon.png" alt="App Icon" width="100" height="100">
-  </a>
-
   <h3 align="center">Fetch Rewards Coding Exercise</h3>
 
   <p align="center">
