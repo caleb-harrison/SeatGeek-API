@@ -62,7 +62,6 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#usage">Usage</a></li>
       </ul>
     </li>
     <li><a href="#license">License</a></li>
@@ -145,14 +144,6 @@ To get a local copy up and running follow these simple steps.
 3. **Command (⌘)-R:** Select your desired device simulator and run the application
 
 _Note: If you would like to check out recommendation features, favorite an event and check "Simulator" -> "Debug" -> "Location" to change the location._
-
-
-
-### Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 
 ## 📄 License
