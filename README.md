@@ -30,7 +30,7 @@
     and displays events in a UITableView. The application fetches recommended<br/>
     events from the user's location and relevant events based on search.
     <br/><br/>
-    <a href="#features-showcase"><strong>Features</strong></a>
+    <a href="#features"><strong>Features</strong></a>
     .
     <a href="#contact"><strong>Contact Information</strong></a>
     .
@@ -59,7 +59,7 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#requirements">Requirements</a></li>
-        <li><a href="#features-showcase">Features Showcase</a></li>
+        <li><a href="#features">Features</a></li>
       </ul>
     </li>
     <li>
@@ -78,7 +78,7 @@
 
 ## About The Project
 
-This Swift project was assigned as a coding exercise from Fetch Rewards. 
+This Swift project was assigned as a coding exercise from Fetch Rewards.
 
 ### Requirements
 - [x] Consume the open-source SeatGeek API
@@ -94,7 +94,7 @@ This Swift project was assigned as a coding exercise from Fetch Rewards.
 - [x] Make sure that the application supports iOS 12 and above
 - [x] Application must compile with Xcode 12.x.x
 
-### Feature Showcase
+### Features
 The app has many cool features outside of the requirements while still remaining simple,
 easy to navigate and learn, and fulfilling the code exercise. Below are demos of some of those features.
 </br>
