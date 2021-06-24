@@ -196,7 +196,7 @@ Although these challenges were something I hadn't done before, I was quickly abl
 >**Working for a company such as Fetch Rewards while being able to do what I love would be a dream come true.
 I hope that my passion can be conveyed in my work here and potentially further in a future conversation! Thank you so much for taking the time to review my submission.**
 
-**– Caleb Harrison ❤️**
+>**– Caleb Harrison ❤️**
 
 ## Contact
 
