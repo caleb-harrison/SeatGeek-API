@@ -163,7 +163,7 @@ To get a local copy up and running, follow these simple steps:
    ```
 2. Open the project in Xcode
    ```sh
-   open FetchRewards-CodingExercise/FetchRewards-CodingExercise/FetchRewards-CodingExercise.xcodeproj
+   open FetchRewards-Coding-Exercise/FetchRewards-CodingExercise/FetchRewards-CodingExercise.xcodeproj
    ```
 3. **Command (⌘)-R:** Select your desired device simulator and run the application
 
