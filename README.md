@@ -103,8 +103,9 @@ favorite an event and having the data be saved to cloud storage.
 
 ### Features
 The app has many cool features outside of the requirements while still remaining simple,
-easy to navigate and learn, and fulfilling the code exercise. Below are demos of some of those features.
+easy to navigate and learn, and fulfilling the code exercise. Below are demos of some of those features:
 </br>
+
 #### Location
 The app initially requests access to the user's location while using the application.
 The location is used along with a favorited event to find recommended events. If the
