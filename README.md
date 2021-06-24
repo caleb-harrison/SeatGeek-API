@@ -91,13 +91,22 @@ This Swift project was assigned as a coding exercise from Fetch Rewards.
 - [x] Application must compile with Xcode 12.x.x
 
 ### Feature Showcase
-Get user's location
+The app features many cool features. Below are demos of some of the features.
+
+#### Location
+The app initially requests access to the user's location while using the application.
+The location is used along with a favorited event to find recommended events. If the
+user denies access, the app will still fetch random events to show the user.
+
+_Note: If you would like to check out recommendation features on the simulator, favorite an
+event and check "Simulator" -> "Debug" -> "Location" to change the location to nearby coordinates._
 
 <img src="Assets/Features/Dark-Location.png" alt="Dark Location" width="223"/>
 
 
 
-Launch screen animation
+#### Launch screen animation
+Whenever you load into the app, you are presented with a custom 
 
 ![Light Launch Animation](https://media.giphy.com/media/ON2rT5F0aYldLU7Fnb/giphy.gif)
 
