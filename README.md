@@ -17,9 +17,9 @@
   </p>
 </p>
 
-<h2 align="center">
+<p align="center">
   <img src="Assets/iPhone12-Mockup.png" alt="iPhone 12 Mockup" height="300"><br/>
-</h2>
+</p>
 
 <p align="center">
     <img src="https://img.shields.io/badge/Platform-iOS-blue.svg?style=for-the-badge" />
