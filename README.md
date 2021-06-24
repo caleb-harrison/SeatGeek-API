@@ -30,6 +30,10 @@
     and displays events in a UITableView. The application fetches recommended<br/>
     events from the user's location and relevant events based on search.
     <br/><br/>
+    <a href="#features-showcase"><strong>Features</strong></a>
+    .
+    <a href="#contact"><strong>Contact Information</strong></a>
+    .
     <a href="#about-the-project"><strong>Explore the documentation »</strong></a>
   </p>
 </p>
