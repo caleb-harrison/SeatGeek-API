@@ -76,7 +76,7 @@
 
 
 
-## About The Project 🔍 
+## About The Project
 
 This Swift project was assigned as a coding exercise from Fetch Rewards. 
 
@@ -107,7 +107,7 @@ event and check "Simulator" -> "Debug" -> "Location" to change the location to n
 
 <img src="Assets/Features/Dark-Location.png" alt="Dark Location" width="223"/>
 
-
+---
 
 #### Launch screen animation
 Whenever you load into the app, you are presented with a custom UIView animation. The animation
@@ -115,7 +115,7 @@ shows the seatgeek logo and zooms in for a seamless transition to the home scree
 
 ![Light Launch Animation](https://media.giphy.com/media/ON2rT5F0aYldLU7Fnb/giphy.gif)
 
-
+---
 
 #### Dark Mode
 Dark mode is automatically recognized from system settings and changes the entire look of the app.
@@ -126,7 +126,7 @@ _Note: If you would like to check out dark/light mode features on the simulator,
 
 ![Dark Mode](https://media.giphy.com/media/F2rTNZJVwj6a76cEfF/giphy.gif)
 
-
+---
 
 #### Favorite events
 Whenever you see an event that you like and want to see more of, you can click the heart
@@ -135,7 +135,7 @@ you unfavorite that event!
 
 ![Light Favorite](https://media.giphy.com/media/WitlCWZur7BAucmMYC/giphy.gif)
 
-
+---
 
 #### Recommended events
 After favoriting an event and allowing the app to use your location, it will fetch the API
@@ -148,7 +148,7 @@ event and check "Simulator" -> "Debug" -> "Location" to change the location to n
 
 ![Dark Recommended](https://media.giphy.com/media/ldUTdnpSNNByJrYqqD/giphy.gif)
 
-
+---
 
 #### Buy tickets for event
 If you see an event that you want to buy a ticket for, you can click the buy ticket button and
@@ -159,7 +159,7 @@ for in the future.
 ![Light Buy](https://media.giphy.com/media/LsoN1NmgG7JAtn7Vkh/giphy.gif)
 
 
-## Getting Started ⚡ 
+## Getting Started
 
 To get a local copy up and running follow these simple steps.
 
@@ -179,7 +179,7 @@ To get a local copy up and running follow these simple steps.
 _**Note: If you would like to check out recommendation features, favorite an event and check "Simulator" -> "Debug" -> "Location" to change the location.**_
 
 
-## Developer Notes 🗣️
+## Developer Notes
 
 This coding exercise brought me a lot of joy and I appreciate the challenge! I learned a few things along the way and drilled many skills deeper into my existing skillset.
 
@@ -198,7 +198,7 @@ I hope that my passion can be conveyed in my work here and potentially further i
 
 **– Caleb Harrison ❤️**
 
-## Contact 📥
+## Contact
 
 Caleb Harrison - calebpharrison@gmail.com
 
@@ -207,7 +207,7 @@ Project Link: [https://github.com/caleb-harrison/FetchRewards-Coding-Exercise](h
 LinkedIn: [https://www.linkedin.com/in/calebharrison0/](https://www.linkedin.com/in/calebharrison0/)
 
 
-## License 📄 
+## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
