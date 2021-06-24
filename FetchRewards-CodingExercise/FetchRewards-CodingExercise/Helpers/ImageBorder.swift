@@ -19,9 +19,10 @@ import Foundation
 import UIKit
 
 extension UIImage {
-
+    
     private static var isStroked = [String: Bool]()
-        
+    
+    /// Describes the state of image being already stroked
     var isStroked: Bool {
         get {
             let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
@@ -33,6 +34,9 @@ extension UIImage {
         }
     }
     
+    /// Colorizes image to mock a stroke as a background
+    /// - Parameter color: color to use as stroke
+    /// - Returns: color filled image that is scaled up
     func colorized(with color: UIColor = .white) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
 
@@ -56,6 +60,12 @@ extension UIImage {
         return colored
     }
     
+    /// Adds stroke to given image
+    /// - Parameters:
+    ///   - color: color of the stroke
+    ///   - thickness: thickness of the stroke
+    ///   - quality: rendering quality of the stroke
+    /// - Returns: image with added stroke
     func stroked(with color: UIColor = .white, thickness: CGFloat = 2, quality: CGFloat = 10) -> UIImage {
         
         if (self.isStroked == true) {
@@ -70,7 +80,7 @@ extension UIImage {
 
         guard let strokeCGImage = strokeImage.cgImage else { return self }
 
-        /// Rendering quality of the stroke
+        // Rendering quality of the stroke
         let step = quality == 0 ? 10 : abs(quality)
 
         let oldRect = CGRect(x: thickness, y: thickness, width: size.width, height: size.height).integral
@@ -114,6 +124,11 @@ extension UIImage {
 
 extension CGPoint {
     
+    /// Rotates CGPoint by given amount of degrees
+    /// - Parameters:
+    ///   - origin: origin to rotate point around
+    ///   - byDegrees: amount of degrees to rotate point
+    /// - Returns: rotated CGPoint
     func rotated(around origin: CGPoint, byDegrees: CGFloat) -> CGPoint {
         let dx = x - origin.x
         let dy = y - origin.y

@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Controller for launch screen animation
 class LaunchScreenViewController: UIViewController {
     
     private let imageView: UIImageView = {
@@ -16,6 +17,7 @@ class LaunchScreenViewController: UIViewController {
         return imageView
     }()
     
+    /// Animates image view then transitions to home view
     private func animate() {
         // Zoom in
         UIView.animate(withDuration: 1, animations: {

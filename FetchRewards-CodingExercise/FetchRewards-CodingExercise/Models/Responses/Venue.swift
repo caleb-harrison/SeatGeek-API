@@ -7,9 +7,13 @@
 
 import Foundation
 
+/// Venue of event
 struct Venue: Codable {
     
+    /// City of event venue
     public let city: String?
+    
+    /// State of event venue
     public let state: String?
     
     private enum CodingKeys: String, CodingKey {
@@ -18,22 +22,3 @@ struct Venue: Codable {
     }
     
 }
-
-/*
-"venue": {
-    "city": "New York",
-    "name": "Terminal 5",
-    "extended_address": null,
-    "url": "https://seatgeek.com/terminal-5-tickets/",
-    "country": "US",
-    "state": "NY",
-    "score": 149.259,
-    "postal_code": "10019",
-    "location": {
-        "lat": 40.77167,
-        "lon": -73.99277
-    },
-    "address": null,
-    "id": 814
- }
- */

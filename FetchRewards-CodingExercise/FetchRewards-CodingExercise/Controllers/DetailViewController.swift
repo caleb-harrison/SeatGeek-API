@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 
+/// Controller for event's detail view
 class DetailViewController: UIViewController {
 
     var selectedEvent: Event!
@@ -35,6 +36,7 @@ class DetailViewController: UIViewController {
         setupWordWrapping()
     }
     
+    /// Sets up favorite button on event's detail view
     private func setupFavoriteButton() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
@@ -80,6 +82,7 @@ class DetailViewController: UIViewController {
         }
     }
     
+    /// Adds rounded corners to buy ticket button
     private func setupBuyButton() {
         buyButton.layer.cornerRadius = 30
         buyButton.clipsToBounds = true
@@ -91,6 +94,7 @@ class DetailViewController: UIViewController {
         }
     }
     
+    /// Toggles the appearance of favorite button and toggles attributed boolean
     private func toggleFavorite() {
         favoritedEvent.toggle()
         
@@ -128,6 +132,7 @@ class DetailViewController: UIViewController {
         toggleFavorite()
     }
     
+    /// Saves event as a favorited event
     private func saveFavorite() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -144,6 +149,7 @@ class DetailViewController: UIViewController {
         }
     }
     
+    /// Deletes event as a favorited event
     private func deleteFavorite() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -160,6 +166,7 @@ class DetailViewController: UIViewController {
         }
     }
     
+    /// Sets all labels with corresponding event's title
     private func setupLabels() {
         eventLabel.text = selectedEvent.title
         dateTimeLabel.text = formatDateTime()
@@ -184,6 +191,7 @@ class DetailViewController: UIViewController {
         locationLabel.numberOfLines = 0
     }
     
+    /// Sets up back button in case of previous versions
     private func setupBackButton() {
         if #available(iOS 13.0, *) {
             backButton.setImage(UIImage(systemName: "chevron.backward")?.withRenderingMode(.alwaysTemplate), for: .normal)

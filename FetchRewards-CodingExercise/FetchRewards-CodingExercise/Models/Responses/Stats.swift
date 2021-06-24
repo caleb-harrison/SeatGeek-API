@@ -7,11 +7,18 @@
 
 import Foundation
 
+/// Statistics of event's tickets
 struct Stats: Codable {
     
     public let listing_count: Int?
+    
+    /// Average price of ticket for event
     public let average_price: Int?
+    
+    /// Lowest price of ticket for event
     public let lowest_price: Int?
+    
+    /// Highest price of ticket for event
     public let highest_price: Int?
     
     private enum CodingKeys: String, CodingKey {
@@ -20,13 +27,5 @@ struct Stats: Codable {
         case lowest_price
         case highest_price
     }
+    
 }
-
-/*
-"stats": {
-    "listing_count": 161,
-    "average_price": 97,
-    "lowest_price": 62,
-    "highest_price": 296
-}
-*/

@@ -18,6 +18,10 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet var eventImage: UIImageView!
     @IBOutlet var favoriteHeartImage: UIImageView!
     
+    /// Sets up each event's table view cell with gathered information
+    /// - Parameters:
+    ///   - event: gathered event from API
+    ///   - favoritedEventIDs: event ID's from favorited events (if any)
     func setupEventTableViewCell(event: Event, favoritedEventIDs: [NSManagedObject]) {
         // Setup labels
         eventLabel.text = event.title
@@ -53,17 +57,20 @@ class EventTableViewCell: UITableViewCell {
         setupWordWrapping()
     }
     
+    /// Sets up word wrapping for labels of various length
     func setupWordWrapping() {
         eventLabel.numberOfLines = 0
         locationLabel.numberOfLines = 0
         dateTimeLabel.numberOfLines = 0
     }
     
+    /// Adds rounded image corners to each table view cell's event image
     func roundImageCorners() {
         eventImage.layer.cornerRadius = 8.0
         eventImage.clipsToBounds = true
     }
     
+    /// Calls custom layout functions
     override func layoutSubviews() {
         super.layoutSubviews()
         roundImageCorners()

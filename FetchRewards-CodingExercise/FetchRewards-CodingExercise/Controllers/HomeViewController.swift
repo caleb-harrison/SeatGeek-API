@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 import CoreLocation
 
+/// Controller for the home screen
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, CLLocationManagerDelegate {
     
     private var events = Events(events: [])
@@ -22,6 +23,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
     
+    /// Client ID for SeatGeek API
     private let clientID = "MjIyODc5MzZ8MTYyNDA4ODc5NS4wNDIyNDMy"
     
     override func viewDidLoad() {
@@ -59,6 +61,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: - SeatGeek API Configuration
     
+    /// Gets random events with no queries
     private func getEvents() {
         guard let url = URL(string: "https://api.seatgeek.com/2/events?client_id=\(clientID)") else { return }
         
@@ -80,6 +83,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         task.resume()
     }
     
+    /// Gets recommended events based on user favorited event and user location
     private func getRecommendations() {
         let eventID: Int!
         getFavoritedEventIDs()
@@ -119,6 +123,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    /// Gets favorited events and their corresponding event ID's
     private func getFavoritedEventIDs() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
@@ -133,11 +138,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    /// Creates search URL from string
+    /// - Parameter search: value to search for through API
+    /// - Returns: query search URL
     private func createSearchURL(search: String) -> URL {
         let query = "https://api.seatgeek.com/2/events?client_id=\(clientID)&q=\(search.replacingOccurrences(of: " ", with: "+").lowercased())"
         return URL(string: query)!
     }
     
+    /// Search for events in SeatGeek API
+    /// - Parameter url: URL to search for events through
     private func searchEvents(url: URL) {
         let search = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
@@ -211,6 +221,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: - Location Setup
     
+    /// Updates coordinates each time user's location changes
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let first = locations.first else { return }
         
@@ -235,7 +246,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    // Emergency method to clear database
+    // MARK: - Emergency Database Method
+    
+    /// Emergency method to clear database
     private func deleteAll() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         

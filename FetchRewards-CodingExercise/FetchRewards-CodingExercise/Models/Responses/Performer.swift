@@ -8,5 +8,8 @@
 import Foundation
 
 struct Performer: Codable {
+    
+    /// Image of event
     public let image: String?
+    
 }

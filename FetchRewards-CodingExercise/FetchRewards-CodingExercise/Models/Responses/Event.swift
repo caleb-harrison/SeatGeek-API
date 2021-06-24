@@ -7,43 +7,46 @@
 
 import Foundation
 
+/// SeatGeek event
 struct Event: Codable {
     
-    // Summary information about currently available ticket listings for the event
+    /// Summary information about currently available ticket listings for the event
     public let stats: Stats?
     
-    // The title of the event
+    /// The title of the event
     public let title: String
     
-    // URL of the event on seatgeek.com – you should direct users here to search for tickets
+    /// URL of the event on seatgeek.com – you should direct users here to search for tickets
     public let url: String
     
-    // Date/time of the event in the local timezone of the venue – you will generally want to display this to users
+    /// Date/time of the event in the local timezone of the venue – you will generally want to display this to users
     public let datetime_local: String
     
-    // Returns bool if date/time is determined
+    /// If time is determined
     public let time_tbd: Bool
+    
+    /// If date is determined
     public let date_tbd: Bool
     
-    // An list of performers – primary, home_team, away_team fields indicate the performer's role at the event
+    /// List of performers
     public let performers: [Performer]
     
-    // A venue response document
+    /// Event venue
     public let venue: Venue
     
-    // A shortened title for the event
+    /// A shortened title for the event
     public let short_title: String
     
-    // Date and time of the event in UTC
+    /// Date and time of the event in UTC
     public let datetime_utc: String
     
-    // A numerical representation of popularity based on ticket sales
+    /// A numerical representation of popularity based on ticket sales
     public let score: Float
     
-    // Type of event
+    /// Type of event
     public let type: String
     
-    // A unique integer identifier for the event
+    /// A unique integer identifier for the event
     public let id: Int
     
     private enum CodingKeys: String, CodingKey {
@@ -62,6 +65,8 @@ struct Event: Codable {
         case id
     }
     
+    /// Formats date and time for label
+    /// - Returns: formatted date and time
     func formatDateTime() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
@@ -86,12 +91,14 @@ struct Event: Codable {
         return dateTimeString
     }
     
+    /// Formats location for label
+    /// - Returns: formatted location
     func formatLocation() -> String {
         // Null safety
         let city = ( venue.city != nil ? venue.city! : "" )
         let state = ( venue.state != nil ? venue.state! : "" )
         
-        // Format location based on possible null values
+        // Format location
         if (city != "" && state != "") {
             return "\(city), \(state)"
         } else if (city == "" && state != "") {
@@ -105,6 +112,8 @@ struct Event: Codable {
     
 }
 
+
+/// Array of events
 struct Events: Codable {
     var events: [Event]
 }

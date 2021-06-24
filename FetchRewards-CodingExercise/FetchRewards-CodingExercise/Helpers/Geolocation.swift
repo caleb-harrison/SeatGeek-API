@@ -9,7 +9,8 @@ import UIKit
 
 extension UIDevice {
     
-    // UNUSED: IP is gathered for populating recommended events for your location.
+    /// UNUSED: Gets IP address for searching for recommended events
+    /// - Returns: IP address
     func getIP() -> String? {
         
         var address: String?
