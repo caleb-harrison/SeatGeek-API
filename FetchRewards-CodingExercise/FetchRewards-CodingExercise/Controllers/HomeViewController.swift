@@ -29,6 +29,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        deleteAll()
+        
         // Setup tableview
         tableView.delegate = self
         tableView.dataSource = self
@@ -49,12 +51,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        getFavoritedEventIDs()
         
         // Ensures back button maintains same events as search
         if (favoritedEvents.count > 0 && (searchBar.text == "" || searchBar.text == nil) && latitude != "" && longitude != "") {
             getRecommendations()
         } else {
-            getFavoritedEventIDs()
             searchEvents(url: createSearchURL(search: searchBar.text ?? ""))
         }
     }
@@ -71,6 +73,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let decoder = JSONDecoder()
                 let eventsResponse = try decoder.decode(Events.self, from: data)
                 self.events = eventsResponse
+                print("Found \(self.events.events.count) random events")
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -86,7 +89,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     /// Gets recommended events based on user favorited event and user location
     private func getRecommendations() {
         let eventID: Int!
-        getFavoritedEventIDs()
         
         if (favoritedEvents.count > 0 && latitude != "" && longitude != "") {
             eventID = favoritedEvents.first!.value(forKeyPath: "eventID") as? Int
@@ -96,10 +98,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 guard let data = data else { return }
                 do {
+                    // Get recommendations
                     let decoder = JSONDecoder()
                     let recommendationResponse = try decoder.decode(Recommendations.self, from: data)
                     self.recommendations = recommendationResponse
                     
+                    // Replace events with new recommended events
+                    var recommendedEvents = [Event]()
+                    for event in self.recommendations.recommendations {
+                        recommendedEvents.append(event.event)
+                    }
+                    self.events.events = recommendedEvents
+                    print("Found \(self.events.events.count) recommended events")
+                    
+                    // Reload tableview
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
@@ -110,13 +122,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             task.resume()
             
-            var recommendedEvents = [Event]()
-            for event in self.recommendations.recommendations {
-                recommendedEvents.append(event.event)
-            }
-            
-            self.events.events = recommendedEvents
-            tableView.reloadData()
         } else {
             print("No favorited events to get recommendations. Try favoriting an event to get recommendations.")
             searchEvents(url: createSearchURL(search: searchBar.text ?? ""))
@@ -135,6 +140,33 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             favoritedEvents = try managedContext.fetch(fetchRequest)
         } catch let error as NSError {
             print("Error thrown while fetching favorited events: \(error), \(error.userInfo)")
+        }
+    }
+    
+    /// Gets favorited events and prepends them to existing events
+    // WORKING! Not using due to small bug with event insertion
+    private func getFavoritedEvents() {
+        if (self.favoritedEvents.count > 0) {
+            
+            for event in self.favoritedEvents {
+                let eventID = event.value(forKeyPath: "eventID") as? Int
+                
+                guard let url = URL(string: "https://api.seatgeek.com/2/events?id=\(eventID!)&client_id=\(clientID)") else { return }
+                
+                let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                    guard let data = data else { return }
+                    do {
+                        let decoder = JSONDecoder()
+                        let eventsResponse = try decoder.decode(Events.self, from: data)
+                        self.events.events.insert(eventsResponse.events.first!, at: 0)
+                        print("Inserted event: \(eventsResponse.events.first!.title)")
+                    } catch let error {
+                        print("Error thrown while fetching data from SeatGeek API: \(error)")
+                    }
+                }
+                
+                task.resume()
+            }
         }
     }
     
