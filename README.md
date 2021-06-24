@@ -23,13 +23,13 @@
 
 <p align="center">
     <img src="https://img.shields.io/badge/Platform-iOS-blue.svg?style=for-the-badge" />
-    <a href="https://swift.org/">
+    <a href="https://swift.org/" target="_blank">
         <img src="https://img.shields.io/badge/Swift-5.4.2-green.svg?style=for-the-badge" alt="Swift Version 5.4.2" />
     </a>
-    <a href="https://github.com/caleb-harrison/FetchRewards-Coding-Exercise/blob/master/LICENSE.txt">
+    <a href="https://github.com/caleb-harrison/FetchRewards-Coding-Exercise/blob/master/LICENSE.txt" target="_blank">
         <img src="https://img.shields.io/github/license/caleb-harrison/FetchRewards-Coding-Exercise?color=red&style=for-the-badge" alt="License: MIT" />
     </a>
-    <a href="https://linkedin.com/in/calebharrison0">
+    <a href="https://linkedin.com/in/calebharrison0" target="_blank">
         <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" alt="LinkedIn: calebharrison0" />
     </a>
 </p>
