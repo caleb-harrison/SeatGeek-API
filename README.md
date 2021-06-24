@@ -143,7 +143,7 @@ event and check "Simulator" -> "Debug" -> "Location" to change the location to n
 
 #### Buy tickets for event
 If you see an event that you want to buy a ticket for, you can click the buy ticket button and
-it will take you directly that event's ticket purchasing link on SeatGeek. Some events may not
+it will take you directly to that event's ticket purchasing link on SeatGeek. Some events may not
 have tickets available for purchase, and that could be something to potentially be added to check
 for in the future.
 
