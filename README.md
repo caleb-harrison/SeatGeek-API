@@ -106,31 +106,51 @@ event and check "Simulator" -> "Debug" -> "Location" to change the location to n
 
 
 #### Launch screen animation
-Whenever you load into the app, you are presented with a custom 
+Whenever you load into the app, you are presented with a custom UIView animation. The animation
+shows the seatgeek logo and zooms in for a seamless transition to the home screen.
 
 ![Light Launch Animation](https://media.giphy.com/media/ON2rT5F0aYldLU7Fnb/giphy.gif)
 
 
 
-Dark Mode
+#### Dark Mode
+Dark mode is automatically recognized from system settings and changes the entire look of the app.
+From the launch animation all the way to the button for buying tickets. 
+
+_Note: If you would like to check out dark/light mode features on the simulator, select
+"Simulator" -> "Features" -> "Toggle Appearance" and change to dark/light mode._
 
 ![Dark Mode](https://media.giphy.com/media/F2rTNZJVwj6a76cEfF/giphy.gif)
 
 
 
-Favorite events
+#### Favorite events
+Whenever you see an event that you like and want to see more of, you can click the heart
+button. This will favorite the event for all screens and it will remain favorited until
+you unfavorite that event!
 
 ![Light Favorite](https://media.giphy.com/media/WitlCWZur7BAucmMYC/giphy.gif)
 
 
 
-See recommended events from favorite event and location
+#### Recommended events
+After favoriting an event and allowing the app to use your location, it will fetch the API
+and find similar events to the event you favorited. Once allowing location and favoriting an
+event, just return to the home screen and it will be populated with events near you that are
+similar to what you favorited!
+
+_Note: If you would like to check out recommendation features on the simulator, favorite an
+event and check "Simulator" -> "Debug" -> "Location" to change the location to nearby coordinates._
 
 ![Dark Recommended](https://media.giphy.com/media/ldUTdnpSNNByJrYqqD/giphy.gif)
 
 
 
-Buy tickets from event details screen
+#### Buy tickets for event
+If you see an event that you want to buy a ticket for, you can click the buy ticket button and
+it will take you directly that event's ticket purchasing link on SeatGeek. Some events may not
+have tickets available for purchase, and that could be something to potentially be added to check
+for in the future.
 
 ![Light Buy](https://media.giphy.com/media/LsoN1NmgG7JAtn7Vkh/giphy.gif)
 
