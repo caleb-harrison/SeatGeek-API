@@ -1,25 +1,3 @@
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** caleb-harrison, FetchRewards-Coding-Exercise, twitter_handle, calebpharrison@gmail.com, project_title, project_description
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 <h1 align="center">
   <img src="Assets/Coding-Exercise-Logo.png" alt="Coding Exercise Logo" height="300"><br/>
 </h1>
@@ -194,12 +172,12 @@ The API brought me a few challenges that I was able to overcome such as:
 - Fetching recommended events from API based on user's location and a favorited event
 - Fetching images from API
 
-Although these challenges were something I hadn't done before, I was quickly able to break down what I wanted to accomplish, do research, and eventually implement the solution. 
+Although these challenges were fairly new to me, I was quickly able to break down what I wanted to accomplish, do extensive research, and eventually implement the solution. 
 
->**This project, among others in the last 6-8 months, has highlighted to me that iOS app development is what I love to do and what best encapsulates my skillset. I have tried many types of software development and explored other computer science options and mobile application development–specifically iOS app development–brings together all of my favorite portions of development. Mobile app development allows me to constantly show my eye for design while also being able to solve real-world problems and see them unfold before my eyes as I progress.**
+>**This project, among others in the last 6-8 months, has highlighted to me that iOS app development is what I love to do and what best encapsulates my skillset. I have tried many types of software development and explored other computer science options and mobile application development–specifically iOS app development–brings together all of my favorite portions of development. Mobile app development allows me to constantly show my eye for design while also being able to solve real-world problems and see them unfold before my eyes.**
 
->**Working for a company such as Fetch Rewards while being able to do what I love would be a dream come true.
-I hope that my passion can be conveyed in my work here and potentially further in a future conversation! Thank you so much for taking the time to review my submission.**
+>**Working for a company such as Fetch Rewards and being able to do what I love would be a dream come true.
+I hope that my passion can be conveyed in my work here and potentially be conveyed further in a future conversation! Thank you so much for taking the time to review my submission and I hope to speak with you soon!**
 
 >**– Caleb Harrison ❤️**
 
@@ -218,8 +196,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-<!-- [commits-shield]: https://img.shields.io/github/commit-activity/m/caleb-harrison/FetchRewards-Coding-Exercise?foo=bar&label=Commits&style=for-the-badge -->
 
 [platform-image]: https://img.shields.io/badge/Platform-iOS-blue.svg?style=for-the-badge
 
