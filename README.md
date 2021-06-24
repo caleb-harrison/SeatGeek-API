@@ -143,7 +143,7 @@ To get a local copy up and running follow these simple steps.
    ```
 3. **Command (⌘)-R:** Select your desired device simulator and run the application
 
-_Note: If you would like to check out recommendation features, favorite an event and check "Simulator" -> "Debug" -> "Location" to change the location._
+_**Note: If you would like to check out recommendation features, favorite an event and check "Simulator" -> "Debug" -> "Location" to change the location.**_
 
 
 ## 📄 License
