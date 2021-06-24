@@ -96,7 +96,7 @@ This Swift project was assigned as a coding exercise from Fetch Rewards.
 
 ### Feature Showcase
 The app features many cool features. Below are demos of some of the features.
-
+</br>
 #### Location
 The app initially requests access to the user's location while using the application.
 The location is used along with a favorited event to find recommended events. If the
@@ -107,7 +107,7 @@ event and check "Simulator" -> "Debug" -> "Location" to change the location to n
 
 <img src="Assets/Features/Dark-Location.png" alt="Dark Location" width="223"/>
 
-<hr>
+</br>
 
 #### Launch screen animation
 Whenever you load into the app, you are presented with a custom UIView animation. The animation
@@ -115,7 +115,7 @@ shows the seatgeek logo and zooms in for a seamless transition to the home scree
 
 ![Light Launch Animation](https://media.giphy.com/media/ON2rT5F0aYldLU7Fnb/giphy.gif)
 
-<hr>
+</br>
 
 #### Dark Mode
 Dark mode is automatically recognized from system settings and changes the entire look of the app.
@@ -126,7 +126,7 @@ _Note: If you would like to check out dark/light mode features on the simulator,
 
 ![Dark Mode](https://media.giphy.com/media/F2rTNZJVwj6a76cEfF/giphy.gif)
 
-<hr>
+</br>
 
 #### Favorite events
 Whenever you see an event that you like and want to see more of, you can click the heart
@@ -135,7 +135,7 @@ you unfavorite that event!
 
 ![Light Favorite](https://media.giphy.com/media/WitlCWZur7BAucmMYC/giphy.gif)
 
-<hr>
+</br>
 
 #### Recommended events
 After favoriting an event and allowing the app to use your location, it will fetch the API
@@ -148,7 +148,7 @@ event and check "Simulator" -> "Debug" -> "Location" to change the location to n
 
 ![Dark Recommended](https://media.giphy.com/media/ldUTdnpSNNByJrYqqD/giphy.gif)
 
-<hr>
+</br>
 
 #### Buy tickets for event
 If you see an event that you want to buy a ticket for, you can click the buy ticket button and
