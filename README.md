@@ -34,7 +34,7 @@
     .
     <a href="#contact"><strong>Contact Information</strong></a>
     .
-    <a href="#📥-about-the-project"><strong>Explore the documentation »</strong></a>
+    <a href="#about-the-project"><strong>Explore the documentation »</strong></a>
   </p>
 </p>
 
@@ -68,15 +68,15 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#license">License</a></li>
     <li><a href="#developer-notes">Developer Notes</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#license">License</a></li>
   </ol>
 </details>
 
 
 
-## 🔍 About The Project
+## About The Project 🔍 
 
 This Swift project was assigned as a coding exercise from Fetch Rewards. 
 
@@ -159,7 +159,7 @@ for in the future.
 ![Light Buy](https://media.giphy.com/media/LsoN1NmgG7JAtn7Vkh/giphy.gif)
 
 
-## ⚡ Getting Started
+## Getting Started ⚡ 
 
 To get a local copy up and running follow these simple steps.
 
@@ -179,12 +179,7 @@ To get a local copy up and running follow these simple steps.
 _**Note: If you would like to check out recommendation features, favorite an event and check "Simulator" -> "Debug" -> "Location" to change the location.**_
 
 
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-
-## 🗣️ Developer Notes
+## Developer Notes 🗣️
 
 This coding exercise brought me a lot of joy and I appreciate the challenge! I learned a few things along the way and drilled many skills deeper into my existing skillset.
 
@@ -203,7 +198,7 @@ I hope that my passion can be conveyed in my work here and potentially further i
 
 **– Caleb Harrison ❤️**
 
-## 📥 Contact
+## Contact 📥
 
 Caleb Harrison - calebpharrison@gmail.com
 
@@ -211,6 +206,10 @@ Project Link: [https://github.com/caleb-harrison/FetchRewards-Coding-Exercise](h
 
 LinkedIn: [https://www.linkedin.com/in/calebharrison0/](https://www.linkedin.com/in/calebharrison0/)
 
+
+## License 📄 
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
