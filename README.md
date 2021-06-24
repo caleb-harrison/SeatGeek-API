@@ -34,7 +34,7 @@
     .
     <a href="#contact"><strong>Contact Information</strong></a>
     .
-    <a href="#about-the-project"><strong>Explore the documentation »</strong></a>
+    <a href="#📥-about-the-project"><strong>Explore the documentation »</strong></a>
   </p>
 </p>
 
