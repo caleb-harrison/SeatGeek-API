@@ -107,7 +107,7 @@ event and check "Simulator" -> "Debug" -> "Location" to change the location to n
 
 <img src="Assets/Features/Dark-Location.png" alt="Dark Location" width="223"/>
 
-
+<hr>
 
 #### Launch screen animation
 Whenever you load into the app, you are presented with a custom UIView animation. The animation
@@ -115,7 +115,7 @@ shows the seatgeek logo and zooms in for a seamless transition to the home scree
 
 ![Light Launch Animation](https://media.giphy.com/media/ON2rT5F0aYldLU7Fnb/giphy.gif)
 
-
+<hr>
 
 #### Dark Mode
 Dark mode is automatically recognized from system settings and changes the entire look of the app.
@@ -126,7 +126,7 @@ _Note: If you would like to check out dark/light mode features on the simulator,
 
 ![Dark Mode](https://media.giphy.com/media/F2rTNZJVwj6a76cEfF/giphy.gif)
 
-
+<hr>
 
 #### Favorite events
 Whenever you see an event that you like and want to see more of, you can click the heart
@@ -135,7 +135,7 @@ you unfavorite that event!
 
 ![Light Favorite](https://media.giphy.com/media/WitlCWZur7BAucmMYC/giphy.gif)
 
-
+<hr>
 
 #### Recommended events
 After favoriting an event and allowing the app to use your location, it will fetch the API
@@ -148,7 +148,7 @@ event and check "Simulator" -> "Debug" -> "Location" to change the location to n
 
 ![Dark Recommended](https://media.giphy.com/media/ldUTdnpSNNByJrYqqD/giphy.gif)
 
-
+<hr>
 
 #### Buy tickets for event
 If you see an event that you want to buy a ticket for, you can click the buy ticket button and
@@ -191,7 +191,7 @@ The API brought me a few challenges that I was able to overcome such as:
 
 Although these challenges were something I hadn't done before, I was quickly able to break down what I wanted to accomplish, do research, and eventually implement the solution. 
 
->**This project, among others in the last 6-8 months, have highlighted to me that iOS app development is what I love to do and what best encapsulates my skillset. I have tried many types of software development and explored other computer science options and mobile application development–specifically iOS app development–brings together all of my favorite portions of development. Mobile app development allows me to constantly show my eye for design while also being able to solve real-world problems and see them unfold before my eyes as I progress.**
+>**This project, among others in the last 6-8 months, has highlighted to me that iOS app development is what I love to do and what best encapsulates my skillset. I have tried many types of software development and explored other computer science options and mobile application development–specifically iOS app development–brings together all of my favorite portions of development. Mobile app development allows me to constantly show my eye for design while also being able to solve real-world problems and see them unfold before my eyes as I progress.**
 
 >**Working for a company such as Fetch Rewards while being able to do what I love would be a dream come true.
 I hope that my passion can be conveyed in my work here and potentially further in a future conversation! Thank you so much for taking the time to review my submission.**
