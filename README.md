@@ -95,7 +95,8 @@ This Swift project was assigned as a coding exercise from Fetch Rewards.
 - [x] Application must compile with Xcode 12.x.x
 
 ### Feature Showcase
-The app features many cool features. Below are demos of some of the features.
+The app has many cool features outside of the requirements while still remaining simple,
+easy to navigate and learn, and fulfilling the code exercise. Below are demos of some of those features.
 </br>
 #### Location
 The app initially requests access to the user's location while using the application.
