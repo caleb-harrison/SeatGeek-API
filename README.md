@@ -79,7 +79,13 @@
 
 ## About The Project
 
-This Swift project was assigned as a coding exercise from Fetch Rewards.
+This Swift project was assigned as a coding exercise from Fetch Rewards. This submission includes
+my flair and personality on top of the standard assignment. My goal was to fulfill all requirements
+and add a few extra features without over-complicating and cluttering the app and UI.
+
+If I were to have spent more time on the app, I may have added a feature to search by category
+(Sports, Concerts, Festivals, etc.), or possibly prompting the user to create an account to be able to
+favorite an event and having the data be saved to cloud storage.
 
 ### Requirements
 - [x] Consume the open-source SeatGeek API
@@ -189,7 +195,6 @@ The API brought me a few challenges that I was able to overcome such as:
 - Backwards compatability prior to iOS 13
 - Fetching recommended events from API based on user's location and a favorited event
 - Fetching images from API
-
 
 Although these challenges were something I hadn't done before, I was quickly able to break down what I wanted to accomplish, do research, and eventually implement the solution. 
 
